@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>Test-RMI</module>
-        <module>Test-JDK8-Time</module>
+        <module>Test-JDK8</module>
     </modules>
     <properties>
         <maven-plugin-api.version>3.5.0</maven-plugin-api.version>
