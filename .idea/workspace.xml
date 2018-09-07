@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eae78046-24c1-4a46-b4f6-c9ced51fcdaf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Test-Java.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-AXURE/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-AXURE/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-AXURE/src/main/resources/AxureTraining.rp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test-RMI/target/test-classes/com/zad/RMI/RMITest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test-AXURE/src/main/resources/AxureTraining.rp" beforeDir="false" afterPath="$PROJECT_DIR$/Test-AXURE/src/main/resources/AxureTraining.rp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -75,7 +68,7 @@
         <counts>
           <entry key="java" value="1993" />
           <entry key="md" value="74" />
-          <entry key="txt" value="15" />
+          <entry key="txt" value="43" />
           <entry key="xml" value="384" />
         </counts>
       </usages-collector>
@@ -83,36 +76,14 @@
         <counts>
           <entry key="JAVA" value="1993" />
           <entry key="Markdown" value="74" />
-          <entry key="PLAIN_TEXT" value="15" />
+          <entry key="PLAIN_TEXT" value="43" />
           <entry key="XML" value="384" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test-AXURE/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Test-AXURE/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="44">
-                <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -196,9 +167,9 @@
     <option name="skipTests" value="true" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="368" />
-    <option name="y" value="94" />
-    <option name="width" value="1300" />
+    <option name="x" value="260" />
+    <option name="y" value="20" />
+    <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -237,6 +208,32 @@
               <item name="Test-Java" type="b2602c69:ProjectViewProjectNode" />
               <item name="Test-Java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Test-Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test-Java" type="462c0819:PsiDirectoryNode" />
+              <item name="Test-AXURE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Test-Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test-Java" type="462c0819:PsiDirectoryNode" />
+              <item name="Test-AXURE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Test-Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test-Java" type="462c0819:PsiDirectoryNode" />
+              <item name="Test-AXURE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Test-Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Test-Java" type="462c0819:PsiDirectoryNode" />
+              <item name="Test-AXURE" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -249,8 +246,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536295792645" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536307066854" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WsFIMS1.0/trunk/src/coordination" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -260,15 +257,16 @@
     <property name="typescript.add.unambiguous.imports.on.the.fly" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Code\Test-Java\Test-AXURE\src\main\resources" />
+      <recent name="F:\Code\Test-Java\Test-RMI\src\test" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\Code\Test-Java\Test-JDK8\src\test\resources" />
       <recent name="F:\Code\Test-Java\Test-RMI\src\main\java\com\zad\webservice" />
       <recent name="F:\Code\Test-Java\Test-JDK8-Time\src\main\resources" />
       <recent name="F:\Code\Test-Java\Test-RMI\src\main\resources" />
       <recent name="F:\Code\Test-Java\Test-RMI\src\test\resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Code\Test-Java\Test-RMI\src\test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -386,7 +384,7 @@
       <workItem from="1536107837355" duration="3039000" />
       <workItem from="1536115699467" duration="10961000" />
       <workItem from="1536131982931" duration="5000" />
-      <workItem from="1536295560037" duration="228000" />
+      <workItem from="1536295560037" duration="2899000" />
     </task>
     <task id="LOCAL-00001" summary="模块修改">
       <created>1536109092549</created>
@@ -402,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536126845202</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="添加Axure模块,学习Axure绘图">
+      <created>1536295896717</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1536295896717</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -438,12 +443,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19951000" />
+    <option name="totallyTimeSpent" value="22576000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24110033" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1788026" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -459,7 +464,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32936978" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49919093" weight="0.32818073" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49919093" visible="true" weight="0.32818073" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5008091" side_tool="true" weight="0.32818073" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32887402" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.32936978" />
@@ -509,7 +514,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="模块修改" />
     <MESSAGE value="Date测试" />
-    <option name="LAST_COMMIT_MESSAGE" value="Date测试" />
+    <MESSAGE value="添加Axure模块,学习Axure绘图" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加Axure模块,学习Axure绘图" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
