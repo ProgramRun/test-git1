@@ -8,6 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Test-JDK8-Time" />
         <module name="Test-RMI" />
+        <module name="TestAXURE" />
+        <module name="TestJDK8" />
+        <module name="TestRMI" />
       </profile>
     </annotationProcessing>
   </component>

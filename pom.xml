@@ -11,6 +11,7 @@
     <modules>
         <module>Test-RMI</module>
         <module>Test-JDK8</module>
+        <module>Test-AXURE</module>
     </modules>
     <properties>
         <maven-plugin-api.version>3.5.0</maven-plugin-api.version>
