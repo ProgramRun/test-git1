@@ -12,8 +12,10 @@
         <module>Test-RMI</module>
         <module>Test-JDK8</module>
         <module>Test-AXURE</module>
+        <module>Test-ZK</module>
     </modules>
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-plugin-api.version>3.5.0</maven-plugin-api.version>
         <maven-plugin-tools-annotations.version>3.5</maven-plugin-tools-annotations.version>
         <junit.version>4.12</junit.version>
@@ -27,18 +29,19 @@
     </properties>
     <dependencyManagement>
         <dependencies>
-            <dependency>
+            <!--<dependency>
                 <groupId>org.apache.maven</groupId>
                 <artifactId>maven-plugin-api</artifactId>
                 <version>${maven-plugin-api.version}</version>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/org.apache.maven.plugin-tools/maven-plugin-tools-annotations -->
+            &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.maven.plugin-tools/maven-plugin-tools-annotations &ndash;&gt;
             <dependency>
                 <groupId>org.apache.maven.plugin-tools</groupId>
                 <artifactId>maven-plugin-tools-annotations</artifactId>
                 <version>${maven-plugin-tools-annotations.version}</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency>-->
+
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
