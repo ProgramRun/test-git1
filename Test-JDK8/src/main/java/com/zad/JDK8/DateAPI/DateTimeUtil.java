@@ -20,7 +20,7 @@ public class DateTimeUtil {
     private static final int PATTERN_CACHE_SIZE = 30;
 
     private DateTimeUtil(){
-        throw  new AssertionError("Util禁止使用构造函数");
+        throw  new AssertionError("Util禁止实例化");
     }
 
 

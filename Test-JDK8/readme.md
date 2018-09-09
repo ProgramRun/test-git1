@@ -21,3 +21,5 @@
 ### DateTimeFormatter
 
 ​	格式化解析和打印date-time的工具类;可以通过Local,Chronology, ZoneId, and DecimalStyle创建;
+
+​	主要的方法有两个,format(格式化)和parse(\解析)

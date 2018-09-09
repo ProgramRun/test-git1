@@ -40,8 +40,8 @@ public class LocalDateTimeApi {
         LocalDateTime parse = LocalDateTime.parse("1990-02-07T12:12:12");
         log.info("String->LocalDateTime : {}", parse);
         log.info("获得年:{},月(英):{},月:{},日:{},周几:{},第几日:{},小时:{},分钟:{},秒:{},纳秒:{}", parse.getYear(), parse.getMonth(), parse.getMonthValue(), parse.getDayOfMonth(), parse.getDayOfWeek(), parse.getDayOfYear(), parse.getHour(), parse.getMinute(), parse.getSecond(), parse.getNano());
-        String format = parse.format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"));
-        String format1 = parse.format(DateTimeFormatter.ISO_LOCAL_DATE);
+        String format = parse.format(DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm:ss"));
+        String format1 = parse.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
         log.info("格式化输出 --> {}  标准格式化 --> {}", format, format1);
     }
 }
