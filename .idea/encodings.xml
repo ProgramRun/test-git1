@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test-AXURE" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test-JDK8" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test-RMI" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test-Redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test-ZK" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Test-lambda" charset="UTF-8" />
+  </component>
+</project>

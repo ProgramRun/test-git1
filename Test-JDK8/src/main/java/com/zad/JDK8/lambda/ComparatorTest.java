@@ -14,6 +14,8 @@ import java.util.List;
  */
 public class ComparatorTest {
     public static void main(String[] args) {
+        assert 1==2;
+
         List<Person> persons = new ArrayList<>(10);
         persons.add(new Person.PersonBuilder().surName("aaa").build());
         persons.add(new Person.PersonBuilder().surName("abb").build());

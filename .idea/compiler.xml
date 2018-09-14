@@ -7,11 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Test-JDK8-Time" />
+        <module name="Test-Redis" />
         <module name="Test-RMI" />
-        <module name="TestAXURE" />
-        <module name="TestJDK8" />
-        <module name="TestRMI" />
+        <module name="Test-ZK" />
+        <module name="Test-AXURE" />
+        <module name="Test-JDK8" />
+        <module name="Test-RMI" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Test-effectivejava" target="1.8" />
+      <module name="Test-lambda" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

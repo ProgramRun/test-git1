@@ -2,8 +2,8 @@ package com.zad.JDK8.DateTimeTest;
 
 import com.zad.JDK8.DateAPI.DateTimeUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -15,7 +15,7 @@ import java.util.Date;
 public class DateTimeUtilTest {
     private static Date date;
 
-    @Before
+    @BeforeEach
     public void init() {
         date = new Date();
     }
@@ -49,6 +49,13 @@ public class DateTimeUtilTest {
 
         log.info("解析LocalTime --> {}", LocalTime.parse("2012", TIME_PATTERN));
 
+    }
 
+    @Test
+    public void t2() {
+        int expected = 4;
+        int actual = 2 + 1;
+        //assertFalse(expected!=actual,"失败");
+        //assertEquals(expected, actual);
     }
 }

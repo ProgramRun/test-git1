@@ -13,6 +13,7 @@
         <module>Test-JDK8</module>
         <module>Test-AXURE</module>
         <module>Test-ZK</module>
+        <module>Test-Redis</module>
     </modules>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -31,6 +32,7 @@
     </properties>
     <build>
         <plugins>
+            <!-- 配置jdk1.8 对应的插件 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -57,12 +59,7 @@
                 <scope>provided</scope>
             </dependency>-->
 
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-                <scope>test</scope>
-            </dependency>
+            <!-- 各种工具类集合,包括Collection/IO 等等-->
             <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
             <dependency>
                 <groupId>com.google.guava</groupId>
@@ -79,13 +76,16 @@
                 <scope>test</scope>
             </dependency>
 
-            <!--时间转换-->
+            <!-- java.lang包的工具类 -->
             <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
             </dependency>
+
+            <!-- A testing framework for the JVM -->
+            <!-- https://mvnrepository.com/artifact/org.testng/testng -->
             <dependency>
                 <groupId>org.testng</groupId>
                 <artifactId>testng</artifactId>
@@ -93,6 +93,7 @@
                 <scope>compile</scope>
             </dependency>
 
+            <!-- lombok插件,各种注解,简化代码 -->
             <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -101,6 +102,7 @@
                 <scope>provided</scope>
             </dependency>
 
+            <!-- 日志输出的门面facade,可用于切换日志输出引擎,定制日志输出格式,并设置日志输出级别 -->
             <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -108,7 +110,7 @@
                 <version>${slf4j-api.version}</version>
             </dependency>
 
-
+            <!-- 打印日志api,依赖于logback-core -->
             <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
@@ -122,6 +124,7 @@
                 <version>${logback.version}</version>
             </dependency>
 
+            <!-- Module "junit-jupiter-api" of JUnit 5 -->
             <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
@@ -129,6 +132,13 @@
                 <version>${junit-jupiter-api.version}</version>
                 <scope>test</scope>
             </dependency>
+
+            <!--<dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>${junit.version}</version>
+                <scope>test</scope>
+            </dependency>-->
         </dependencies>
     </dependencyManagement>
 </project>
