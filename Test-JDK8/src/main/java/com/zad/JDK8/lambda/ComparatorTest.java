@@ -1,5 +1,8 @@
 package com.zad.JDK8.lambda;
 
+
+import com.zad.JDK8.common.Person;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -17,9 +20,9 @@ public class ComparatorTest {
         assert 1==2;
 
         List<Person> persons = new ArrayList<>(10);
-        persons.add(new Person.PersonBuilder().surName("aaa").build());
-        persons.add(new Person.PersonBuilder().surName("abb").build());
-        persons.add(new Person.PersonBuilder().surName("abc").build());
+        persons.add(Person.builder().surName("aaa").build());
+        persons.add(Person.builder().surName("abb").build());
+        persons.add(Person.builder().surName("abc").build());
 
         Collections.sort(persons, new Comparator<Person>() {
             @Override
