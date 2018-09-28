@@ -53,9 +53,7 @@ public class DateTimeUtilTest {
 
     @Test
     public void t2() {
-        int expected = 4;
-        int actual = 2 + 1;
-        //assertFalse(expected!=actual,"失败");
-        //assertEquals(expected, actual);
+        Date date = DateTimeUtil.parseDate("1990-02-07 12:12:12", DateTimeUtil.YYYY_MM_DD_HH_MM_SS);
+        System.out.println(date);
     }
 }

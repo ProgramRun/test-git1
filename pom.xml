@@ -16,6 +16,8 @@
         <module>Test-Redis</module>
         <module>Test-Dubbo</module>
         <module>Test-Netty</module>
+        <module>Test-activemq</module>
+        <module>Test-Kafka</module>
     </modules>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -31,6 +33,9 @@
         <slf4j-api.version>1.7.25</slf4j-api.version>
         <logback.version>1.2.3</logback.version>
         <junit-jupiter-api.version>5.2.0</junit-jupiter-api.version>
+        <activemq.version>5.15.2</activemq.version>
+        <netty.version>4.1.16.Final</netty.version>
+        <fastjson.version>1.2.49</fastjson.version>
     </properties>
     <build>
         <plugins>
@@ -106,11 +111,11 @@
 
             <!-- 日志输出的门面facade,可用于切换日志输出引擎,定制日志输出格式,并设置日志输出级别 -->
             <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-            <dependency>
+           <!-- <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j-api.version}</version>
-            </dependency>
+            </dependency>-->
 
             <!-- 打印日志api,依赖于logback-core -->
             <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
@@ -154,16 +159,26 @@
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
-                <version>4.1.16.Final</version>
+                <version>${netty.version}</version>
             </dependency>
 
 
-            <!--<dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-                <scope>test</scope>
-            </dependency>-->
+            <!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-all -->
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-all</artifactId>
+                <version>${activemq.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+            <!-- Fastjson is a JSON processor (JSON parser + JSON generator) written in Java -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+
         </dependencies>
     </dependencyManagement>
 </project>

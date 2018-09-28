@@ -6,13 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Test-JDK8-Time" />
+        <module name="Test-activemq" />
+        <module name="Test-AXURE" />
+        <module name="Test-Dubbo" />
+        <module name="Test-JDK8" />
+        <module name="Test-Kafka" />
+        <module name="Test-Netty" />
         <module name="Test-Redis" />
         <module name="Test-RMI" />
         <module name="Test-ZK" />
-        <module name="Test-AXURE" />
-        <module name="Test-JDK8" />
-        <module name="Test-RMI" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

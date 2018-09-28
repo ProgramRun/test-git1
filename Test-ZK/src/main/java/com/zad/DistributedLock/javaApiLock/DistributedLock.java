@@ -41,6 +41,7 @@ public class DistributedLock {
     // 获取锁
     public boolean lock() {
         try {
+            // 创建临时有序节点
             lockId = zk.create(ROOT_LOCKS + "/", data, ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL_SEQUENTIAL);
             System.out.println(Thread.currentThread().getName() + " -> 创建了节点[" + lockId + "],开始竞争锁");
 

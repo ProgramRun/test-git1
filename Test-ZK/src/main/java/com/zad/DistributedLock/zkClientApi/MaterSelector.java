@@ -16,15 +16,25 @@ import java.util.concurrent.TimeUnit;
  * @create 2018-09-10 20:54
  */
 public class MaterSelector {
-
+    /**
+     * ZK ip端口号
+     */
     private ZkClient zkClient;
-    // 需要争抢的节点
+    /**
+     * 需要争抢的节点
+     */
     private final static String MASTER = "/master";
-    // 注册节点内容变化
+    /**
+     * 监听器
+     */
     private IZkDataListener dataListener;
-    // 其他服务器
+    /**
+     * 其他服务器
+     */
     private UserCenter server;
-    // master 节点
+    /**
+     * 主服务器
+     */
     private UserCenter master;
 
     ScheduledExecutorService scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
@@ -87,9 +97,9 @@ public class MaterSelector {
                 releaseMaster();
             }, 5, TimeUnit.SECONDS);
         } catch (ZkNodeExistsException e) {
+            // master已经存在
             UserCenter center = zkClient.readData(MASTER, true);
             if (center == null) {
-                // master已经存在
                 chooseMater();// 再次获取master
             } else {
                 master = center;

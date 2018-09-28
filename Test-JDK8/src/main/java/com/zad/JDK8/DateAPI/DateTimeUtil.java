@@ -19,8 +19,12 @@ public class DateTimeUtil {
 
     private static final int PATTERN_CACHE_SIZE = 30;
 
-    private DateTimeUtil(){
-        throw  new AssertionError("Util禁止实例化");
+    public static final String YYYY_MM_DD = "yyyy-MM-dd";
+
+    public static final String YYYY_MM_DD_HH_MM_SS = "yyyy-MM-dd HH:mm:ss";
+
+    private DateTimeUtil() {
+        throw new AssertionError("Util禁止实例化");
     }
 
 

@@ -9,6 +9,7 @@ public enum Gender {
      * 男性
      */
     MAN(1, "man");
+
     private int code;
     private String name;
 

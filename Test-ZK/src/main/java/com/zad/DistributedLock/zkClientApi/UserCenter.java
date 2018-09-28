@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * 描述:
- * sss
+ * 存入节点的信息
  *
  * @author zad
  * @create 2018-09-10 20:52
