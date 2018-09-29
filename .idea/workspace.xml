@@ -8,201 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eae78046-24c1-4a46-b4f6-c9ced51fcdaf" name="Default Changelist" comment="Axure绘图1">
-      <change afterPath="$PROJECT_DIR$/.idea/smartfox_info.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Dubbo/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Kafka/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Kafka/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/chat/client/ChatClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/chat/handler/ChatClientHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/chat/handler/HttpHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/chat/handler/SocketHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/chat/handler/WebSocketHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/chat/process/MsgProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/chat/protocol/IMDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/chat/protocol/IMEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/chat/protocol/IMMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/chat/protocol/IMP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/chat/server/ChatServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/http/MyRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/http/MyResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/http/ZadServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/rpc/api/IRpcCal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/rpc/api/IRpcHello.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/rpc/consumer/RpcConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/rpc/consumer/proxy/ProxyHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/rpc/consumer/proxy/RpcProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/rpc/core/msg/InvokeMsg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/rpc/provider/RpcCal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/rpc/provider/RpcHello.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/rpc/registry/RegistryHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/rpc/registry/RpcRegistry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/servlet/MyServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/tomcat/netty/server/MyHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/tomcat/netty/server/MyTomcat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/chat.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/100.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/101.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/102.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/103.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/104.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/105.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/106.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/107.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/108.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/109.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/110.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/111.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/112.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/113.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/114.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/115.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/116.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/117.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/118.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/119.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/120.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/121.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/122.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/123.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/124.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/125.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/126.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/127.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/128.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/129.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/13.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/130.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/14.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/15.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/16.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/17.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/18.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/19.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/20.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/21.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/22.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/23.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/24.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/25.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/26.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/27.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/28.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/29.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/30.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/31.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/32.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/33.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/34.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/35.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/36.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/37.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/38.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/39.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/40.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/41.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/42.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/43.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/44.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/45.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/46.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/47.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/48.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/49.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/50.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/51.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/52.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/53.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/54.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/55.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/56.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/57.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/58.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/59.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/60.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/61.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/62.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/63.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/64.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/65.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/66.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/67.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/68.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/69.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/70.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/71.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/72.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/73.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/74.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/75.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/76.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/77.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/78.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/79.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/80.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/81.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/82.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/83.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/84.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/85.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/86.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/87.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/88.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/89.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/90.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/91.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/92.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/93.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/94.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/95.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/96.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/97.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/98.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/face/99.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/icon/face.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/icon/file.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/icon/flower.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/images/icon/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/js/chat.util.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/js/lib/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Netty/src/main/resources/webroot/js/lib/jquery.snowfall.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Redis/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-ZK/src/main/java/com/zad/curator/CuratorSelector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-activemq/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-activemq/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-activemq/src/main/java/com/zad/consumer/JmsReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-activemq/src/main/java/com/zad/provider/JmsSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test-Kafka/src/main/java/com/zad/Consumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test-Kafka/src/main/java/com/zad/KafkaCommons.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test-Kafka/src/main/java/com/zad/Producer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test-Kafka/src/main/resources/logback.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test-Dubbo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test-Dubbo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test-JDK8/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test-JDK8/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test-JDK8/src/main/java/com/zad/JDK8/DateAPI/DateTimeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test-JDK8/src/main/java/com/zad/JDK8/DateAPI/DateTimeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test-JDK8/src/main/java/com/zad/JDK8/common/Gender.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test-JDK8/src/main/java/com/zad/JDK8/common/Gender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test-JDK8/src/test/java/com/zad/JDK8/DateTimeTest/DateTimeUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test-JDK8/src/test/java/com/zad/JDK8/DateTimeTest/DateTimeUtilTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test-Netty/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test-Netty/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test-RMI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test-RMI/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test-Redis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test-Redis/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test-Kafka/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test-Kafka/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test-ZK/TestZK.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Test-ZK/Test-ZK.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test-ZK/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Test-ZK/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test-ZK/src/main/java/com/zad/DistributedLock/javaApiLock/DistributedLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test-ZK/src/main/java/com/zad/DistributedLock/javaApiLock/DistributedLock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test-ZK/src/main/java/com/zad/DistributedLock/zkClientApi/MaterSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test-ZK/src/main/java/com/zad/DistributedLock/zkClientApi/MaterSelector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test-ZK/src/main/java/com/zad/DistributedLock/zkClientApi/UserCenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Test-ZK/src/main/java/com/zad/DistributedLock/zkClientApi/UserCenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -250,7 +62,7 @@
     <session id="231049584">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="34" />
+          <entry key="project.closed" value="36" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
@@ -264,65 +76,75 @@
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.40" value="1" />
-          <entry key="project.open.time.5" value="9" />
+          <entry key="project.open.time.5" value="10" />
           <entry key="project.open.time.6" value="5" />
-          <entry key="project.open.time.7" value="6" />
-          <entry key="project.opened" value="36" />
+          <entry key="project.open.time.7" value="7" />
+          <entry key="project.opened" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="8" />
+          <entry key="class" value="9" />
           <entry key="css" value="2" />
           <entry key="gif" value="1" />
           <entry key="html" value="2" />
           <entry key="iml" value="1" />
-          <entry key="java" value="420" />
+          <entry key="java" value="429" />
           <entry key="js" value="4" />
-          <entry key="md" value="18" />
+          <entry key="md" value="20" />
           <entry key="mf" value="1" />
           <entry key="ts" value="1" />
-          <entry key="xml" value="87" />
+          <entry key="xml" value="93" />
           <entry key="yml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="8" />
+          <entry key="CLASS" value="9" />
           <entry key="CSS" value="2" />
           <entry key="HTML" value="2" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="Image" value="1" />
-          <entry key="JAVA" value="420" />
+          <entry key="JAVA" value="429" />
           <entry key="JavaScript" value="4" />
           <entry key="Manifest" value="1" />
-          <entry key="Markdown" value="18" />
+          <entry key="Markdown" value="20" />
           <entry key="TypeScript" value="1" />
-          <entry key="XML" value="87" />
+          <entry key="XML" value="93" />
           <entry key="YAML" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8570" />
+          <entry key="java" value="9847" />
           <entry key="md" value="74" />
-          <entry key="txt" value="57" />
-          <entry key="xml" value="892" />
+          <entry key="txt" value="66" />
+          <entry key="xml" value="899" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8569" />
+          <entry key="JAVA" value="9846" />
           <entry key="Markdown" value="74" />
-          <entry key="PLAIN_TEXT" value="57" />
+          <entry key="PLAIN_TEXT" value="66" />
           <entry key="RegExp" value="1" />
-          <entry key="XML" value="892" />
+          <entry key="XML" value="899" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Test-Kafka/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -363,9 +185,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Test-lambda/src/main/java/lambda/adt/hlist/Tuple2.java" />
-        <option value="$PROJECT_DIR$/.idea/compiler.xml" />
-        <option value="$PROJECT_DIR$/Test-activemq/pom.xml" />
         <option value="$PROJECT_DIR$/Test-activemq/src/main/java/com/zad/consumer/JmsReserver.java" />
         <option value="$PROJECT_DIR$/Test-activemq/src/main/java/com/zad/consumer/JmsReceiver.java" />
         <option value="$PROJECT_DIR$/Test-activemq/src/main/java/com/zad/provider/JmsSender.java" />
@@ -413,6 +232,9 @@
         <option value="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/rpc/api/IRpcCal.java" />
         <option value="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/rpc/provider/RpcCal.java" />
         <option value="$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/rpc/consumer/RpcConsumer.java" />
+        <option value="$PROJECT_DIR$/Test-Kafka/src/main/java/com/zad/KafkaUtil.java" />
+        <option value="$PROJECT_DIR$/Test-Kafka/src/main/java/com/zad/Producer.java" />
+        <option value="$PROJECT_DIR$/Test-Kafka/src/main/java/com/zad/Consumer.java" />
         <option value="$PROJECT_DIR$/Test-Kafka/pom.xml" />
       </list>
     </option>
@@ -437,12 +259,7 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Test-Netty" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="Test-Netty" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+          <item name="Test-Kafka" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
       </expand>
       <select />
@@ -487,8 +304,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -507,8 +324,8 @@
     <property name="SearchEverywhereHistoryKey" value="channelRegister&#9;PSI&#9;JAVA://io.netty.channel.ChannelInboundHandler#channelRegistered&#10;doRegister()&#9;PSI&#9;JAVA://io.netty.channel.AbstractChannel#doRegister&#10;register0&#9;PSI&#9;JAVA://io.netty.channel.AbstractChannel.AbstractUnsafe#register0&#10;assert&#9;null&#9;null" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538133124062" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Test-maven" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538184747836" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../java-design-patterns" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -519,16 +336,16 @@
     <property name="typescript.add.unambiguous.imports.on.the.fly" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Code\Test-Java\Test-AXURE\src\main\resources" />
+      <recent name="F:\Code\Test-Java\Test-RMI\src\test" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Code\Test-Java\Test-Kafka\src\main\resources" />
       <recent name="F:\Code\Test-Java\Test-Netty\src\main\java\com\zad\chat\handler" />
       <recent name="F:\Code\Test-Java\Test-Netty\src\main\java\com\zad\chat\client" />
       <recent name="F:\Code\Test-Java\Test-Netty\src\main\resources\webroot\css" />
       <recent name="F:\Code\Test-Java\Test-Netty\src\main\resources\webroot\images" />
-      <recent name="F:\Code\Test-Java\Test-Netty\src\main\resources\webroot\js" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\Code\Test-Java\Test-AXURE\src\main\resources" />
-      <recent name="F:\Code\Test-Java\Test-RMI\src\test" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -543,7 +360,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RpcConsumer">
+  <component name="RunManager" selected="Application.Producer">
     <configuration name="ChatClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.zad.chat.client.ChatClient" />
       <module name="Test-Netty" />
@@ -557,12 +374,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ChatServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.zad.chat.server.ChatServer" />
-      <module name="Test-Netty" />
+    <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zad.Consumer" />
+      <module name="Test-Kafka" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zad.chat.server.*" />
+          <option name="PATTERN" value="com.zad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Producer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.zad.Producer" />
+      <module name="Test-Kafka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zad.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -596,36 +426,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DateTimeUtilTest.t1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Test-JDK8" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zad.JDK8.DateTimeTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zad.JDK8.DateTimeTest" />
-      <option name="MAIN_CLASS_NAME" value="com.zad.JDK8.DateTimeTest.DateTimeUtilTest" />
-      <option name="METHOD_NAME" value="t1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
-      <item itemvalue="JUnit.DateTimeUtilTest.t1" />
-      <item itemvalue="Application.ChatServer" />
       <item itemvalue="Application.ChatClient" />
       <item itemvalue="Application.RpcRegistry" />
       <item itemvalue="Application.RpcConsumer" />
+      <item itemvalue="Application.Consumer" />
+      <item itemvalue="Application.Producer" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Producer" />
+        <item itemvalue="Application.Consumer" />
         <item itemvalue="Application.RpcConsumer" />
         <item itemvalue="Application.RpcRegistry" />
         <item itemvalue="Application.ChatClient" />
-        <item itemvalue="Application.ChatServer" />
-        <item itemvalue="JUnit.DateTimeUtilTest.t1" />
       </list>
     </recent_temporary>
   </component>
@@ -674,7 +488,9 @@
       <workItem from="1538035449937" duration="7000" />
       <workItem from="1538041414469" duration="11738000" />
       <workItem from="1538086463985" duration="6055000" />
-      <workItem from="1538128266959" duration="1836000" />
+      <workItem from="1538128266959" duration="3428000" />
+      <workItem from="1538141251503" duration="3015000" />
+      <workItem from="1538179920622" duration="4471000" />
     </task>
     <task id="LOCAL-00001" summary="模块修改">
       <created>1536109092549</created>
@@ -711,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1536745790708</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="项目整理">
+      <created>1538133231053</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1538133231053</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -747,12 +570,12 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111083000" />
+    <option name="totallyTimeSpent" value="120161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15298508" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11886994" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -856,7 +679,8 @@
     <MESSAGE value="添加Axure模块,学习Axure绘图" />
     <MESSAGE value="Axure绘图1" />
     <MESSAGE value="Axure绘图2 添加备注" />
-    <option name="LAST_COMMIT_MESSAGE" value="Axure绘图2 添加备注" />
+    <MESSAGE value="项目整理" />
+    <option name="LAST_COMMIT_MESSAGE" value="项目整理" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -920,91 +744,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/chat/server/ChatServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/chat/client/ChatClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="999">
-          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.16.Final/netty-all-4.1.16.Final-sources.jar!/io/netty/bootstrap/AbstractBootstrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7479">
-          <caret line="317" column="24" selection-start-line="317" selection-start-column="24" selection-end-line="317" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.16.Final/netty-all-4.1.16.Final-sources.jar!/io/netty/bootstrap/Bootstrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="196" column="40" selection-start-line="196" selection-start-column="40" selection-end-line="196" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.16.Final/netty-all-4.1.16.Final-sources.jar!/io/netty/channel/ChannelOption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="115" column="47" selection-start-line="115" selection-start-column="47" selection-end-line="115" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.16.Final/netty-all-4.1.16.Final-sources.jar!/io/netty/handler/codec/serialization/ObjectDecoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="61" column="52" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.16.Final/netty-all-4.1.16.Final-sources.jar!/io/netty/handler/codec/serialization/CachingClassResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.16.Final/netty-all-4.1.16.Final-sources.jar!/io/netty/handler/codec/serialization/ClassResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.16.Final/netty-all-4.1.16.Final-sources.jar!/io/netty/handler/codec/serialization/ClassResolvers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="843" column="22" selection-start-line="843" selection-start-column="22" selection-end-line="843" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/rpc/core.msg.css" />
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/reflect/Executable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="202" column="29" selection-start-line="202" selection-start-column="29" selection-end-line="202" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/reflect/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="183" selection-start-line="183" selection-end-line="183" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test-Netty/src/main/java/com/zad/rpc/api/IRpcHello.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -1217,13 +956,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test-Kafka/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test-activemq/src/main/java/com/zad/consumer/JmsReceiver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -1268,6 +1000,115 @@
         <state split_layout="SPLIT">
           <first_editor />
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Properties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="121" column="6" selection-start-line="121" selection-start-column="6" selection-end-line="121" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_181/src.zip!/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="4787" column="30" selection-start-line="4787" selection-start-column="30" selection-end-line="4787" selection-end-column="30" />
+          <folding>
+            <element signature="e#186747#186748#0" expanded="true" />
+            <element signature="e#186792#186793#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/2.0.0/kafka-clients-2.0.0.jar!/org/apache/kafka/clients/consumer/KafkaConsumer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="347" column="33" selection-start-line="347" selection-start-column="33" selection-end-line="347" selection-end-column="33" />
+          <folding>
+            <element signature="e#17553#17554#0" expanded="true" />
+            <element signature="e#17601#17602#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.8.0_181/src.zip!/java/time/Duration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="258" column="27" selection-start-line="258" selection-start-column="27" selection-end-line="258" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/2.0.0/kafka-clients-2.0.0-sources.jar!/org/apache/kafka/clients/consumer/KafkaConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="1152" column="52" selection-start-line="1152" selection-start-column="44" selection-end-line="1152" selection-end-column="52" />
+          <folding>
+            <element signature="e#66747#66748#0" expanded="true" />
+            <element signature="e#66790#66791#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test-Kafka/src/main/java/com/zad/KafkaCommons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test-Kafka/src/main/resources/logback.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test-JDK8/src/main/resources/logback.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.2/lombok-1.18.2-sources.jar!/lombok/extern/slf4j/Slf4j.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-324">
+          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test-Kafka/src/main/java/com/zad/Producer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test-Kafka/src/main/java/com/zad/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test-Kafka/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
         </state>
       </provider>
     </entry>
