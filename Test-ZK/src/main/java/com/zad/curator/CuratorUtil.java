@@ -19,7 +19,8 @@ public class CuratorUtil {
     private static String ZK_CONNECTION = "192.168.220.131:2181,192.168.220.132:2181,192.168.220.133:2181";
 
     public static CuratorFramework getConnection() {
-        CuratorFramework build = CuratorFrameworkFactory.builder().connectString(ZK_CONNECTION)
+        CuratorFramework build = CuratorFrameworkFactory.builder()
+                .connectString(ZK_CONNECTION)
                 .connectionTimeoutMs(10000)
                 .sessionTimeoutMs(10000)
                 .retryPolicy(new ExponentialBackoffRetry(1000, 3)).build();

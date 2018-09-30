@@ -14,13 +14,16 @@ public class JedisConnection {
         throw new AssertionError("禁止实例化");
     }
 
-    private static final Jedis jedis = null;
+    private static Jedis jedis = null;
 
     public static Jedis getConnection() {
         if (jedis == null) {
             synchronized (JedisConnection.class) {
                 if (jedis == null) {
-                    return new Jedis("localhost", 6379);
+                    jedis = new Jedis("192.168.220.131", 6379);
+                    // 访问密码
+                    jedis.auth("111111");
+                    return jedis;
                 } else {
                     return jedis;
                 }

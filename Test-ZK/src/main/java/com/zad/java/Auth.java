@@ -37,10 +37,10 @@ public class Auth implements Watcher {
         if (event.getState() == Event.KeeperState.SyncConnected) {
             if (Event.EventType.None == event.getType() && null == event.getPath()) {
                 countDownLatch.countDown();
-                System.out.println("OK you're connected to server");
+                System.out.println("OK you're connected to server ");
             } else if (Event.EventType.NodeDataChanged == event.getType()) {
                 try {
-                    System.out.println("node date changed");
+                    System.out.println("node date changed ");
                     log.info("data changed from {} to {}", event.getPath(), zk.getData(event.getPath(), true, new Stat()));
                 } catch (KeeperException e) {
                     e.printStackTrace();

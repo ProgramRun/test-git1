@@ -23,8 +23,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven-plugin-api.version>3.5.0</maven-plugin-api.version>
-        <maven-plugin-tools-annotations.version>3.5</maven-plugin-tools-annotations.version>
         <junit.version>4.12</junit.version>
         <guava.version>26.0-jre</guava.version>
         <contiperf.version>2.3.4</contiperf.version>
@@ -36,6 +34,8 @@
         <activemq.version>5.15.2</activemq.version>
         <netty.version>4.1.16.Final</netty.version>
         <fastjson.version>1.2.49</fastjson.version>
+        <commons-pool2.version>2.6.0</commons-pool2.version>
+        <jedis.version>2.9.0</jedis.version>
     </properties>
     <build>
         <plugins>
@@ -53,18 +53,6 @@
     </build>
     <dependencyManagement>
         <dependencies>
-            <!--<dependency>
-                <groupId>org.apache.maven</groupId>
-                <artifactId>maven-plugin-api</artifactId>
-                <version>${maven-plugin-api.version}</version>
-            </dependency>
-            &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.maven.plugin-tools/maven-plugin-tools-annotations &ndash;&gt;
-            <dependency>
-                <groupId>org.apache.maven.plugin-tools</groupId>
-                <artifactId>maven-plugin-tools-annotations</artifactId>
-                <version>${maven-plugin-tools-annotations.version}</version>
-                <scope>provided</scope>
-            </dependency>-->
 
             <!-- 各种工具类集合,包括Collection/IO 等等-->
             <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
@@ -145,15 +133,16 @@
             <dependency>
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
-                <version>2.9.0</version>
+                <version>${jedis.version}</version>
             </dependency>
 
             <!-- 配置数据连接池 -->
             <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-pool2 -->
+            <!-- The Apache Commons Object Pooling Library -->
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-pool2</artifactId>
-                <version>2.4.2</version>
+                <version>${commons-pool2.version}</version>
             </dependency>
 
             <dependency>
@@ -177,7 +166,6 @@
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
-
 
         </dependencies>
     </dependencyManagement>

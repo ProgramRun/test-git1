@@ -1,6 +1,7 @@
 package com.zad.curator;
 
 import org.apache.curator.framework.CuratorFramework;
+import org.apache.curator.framework.recipes.cache.NodeCache;
 import org.apache.curator.framework.recipes.cache.PathChildrenCache;
 import org.apache.zookeeper.CreateMode;
 
@@ -26,7 +27,7 @@ public class CuratorEventDemo {
          */
 
         // NodeCache变化
-        /*final NodeCache nodeCache = new NodeCache(connection, "/curator", false);
+        final NodeCache nodeCache = new NodeCache(connection, "/curator", false);
 
         nodeCache.start(true);
 
@@ -34,10 +35,10 @@ public class CuratorEventDemo {
 
         connection.setData().forPath("/curator", "zad".getBytes());
 
-        TimeUnit.SECONDS.sleep(3L);*/
+        TimeUnit.SECONDS.sleep(3L);
 
         // PathChildrenCache
-        /*PathChildrenCache cache = new PathChildrenCache(connection, "/event", false);
+        PathChildrenCache cache = new PathChildrenCache(connection, "/event", false);
         cache.start(PathChildrenCache.StartMode.POST_INITIALIZED_EVENT);
         cache.getListenable().addListener((curatorFramework, pathChildrenCache) -> {
             switch (pathChildrenCache.getType()) {
@@ -67,7 +68,7 @@ public class CuratorEventDemo {
 
         connection.delete().forPath("/event/event1");
 
-        TimeUnit.SECONDS.sleep(2L);*/
+        TimeUnit.SECONDS.sleep(2L);
 
     }
 }

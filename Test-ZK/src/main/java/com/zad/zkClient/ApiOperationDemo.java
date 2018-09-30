@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class ApiOperationDemo {
     private static String ZK_CONNECTION = "192.168.220.131:2181,192.168.220.132:2181,192.168.220.133:2181";
 
-    public static ZkClient getConnection() {
+    private static ZkClient getConnection() {
         return new ZkClient(ZK_CONNECTION, 10000);
     }
 
