@@ -18,6 +18,7 @@
         <module>Test-Netty</module>
         <module>Test-activemq</module>
         <module>Test-Kafka</module>
+        <module>Test-Tomcat</module>
     </modules>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -36,6 +37,7 @@
         <fastjson.version>1.2.49</fastjson.version>
         <commons-pool2.version>2.6.0</commons-pool2.version>
         <jedis.version>2.9.0</jedis.version>
+        <jjwt.version>0.9.1</jjwt.version>
     </properties>
     <build>
         <plugins>
@@ -166,6 +168,15 @@
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
+
+            <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+            <!-- JSON Web Token Support For The JVM -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>

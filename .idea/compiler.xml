@@ -14,6 +14,7 @@
         <module name="Test-Netty" />
         <module name="Test-Redis" />
         <module name="Test-RMI" />
+        <module name="Test-Tomcat" />
         <module name="Test-ZK" />
       </profile>
     </annotationProcessing>

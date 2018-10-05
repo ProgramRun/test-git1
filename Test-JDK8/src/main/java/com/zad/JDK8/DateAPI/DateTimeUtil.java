@@ -1,7 +1,9 @@
 package com.zad.JDK8.DateAPI;
 
-import java.time.LocalDateTime;
-import java.time.ZoneId;
+
+import org.apache.commons.lang3.StringUtils;
+
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.concurrent.ConcurrentHashMap;
@@ -15,6 +17,7 @@ import java.util.concurrent.ConcurrentMap;
  * @create 2018-09-08 15:50
  */
 public class DateTimeUtil {
+
     private static final ConcurrentMap<String, DateTimeFormatter> FORMATTER_CACHE = new ConcurrentHashMap<>();
 
     private static final int PATTERN_CACHE_SIZE = 30;
@@ -82,7 +85,7 @@ public class DateTimeUtil {
      * @return
      */
     private static DateTimeFormatter getFormatter(String pattern) {
-        if (pattern == null || pattern.length() == 0) {
+        if (StringUtils.isBlank(pattern)) {
             throw new IllegalArgumentException("Invalid pattern specification");
         }
         DateTimeFormatter formatter = FORMATTER_CACHE.get(pattern);
@@ -97,5 +100,108 @@ public class DateTimeUtil {
         }
 
         return formatter;
+    }
+
+    /**
+     * Date --> LocalDateTime
+     *
+     * @param date
+     * @return
+     */
+    public static LocalDateTime dateToLocalDateTime(Date date) {
+        return LocalDateTime.ofInstant(date.toInstant(), ZoneId.systemDefault());
+    }
+
+    /**
+     * Date --> LocalDate
+     *
+     * @param date
+     * @return
+     */
+    public static LocalDate dateToLocalDate(Date date) {
+        LocalDateTime localDateTime = LocalDateTime
+                .ofInstant(date.toInstant(), ZoneId.systemDefault());
+        return localDateTime.toLocalDate();
+    }
+
+    /**
+     * Date --> LocalTime
+     *
+     * @param date
+     * @return
+     */
+    public static LocalTime dateToLocalTime(Date date) {
+        LocalDateTime localDateTime = LocalDateTime
+                .ofInstant(date.toInstant(), ZoneId.systemDefault());
+        return localDateTime.toLocalTime();
+    }
+
+
+    /**
+     * LocalDateTime -->Date
+     *
+     * @param localDateTime
+     * @return
+     */
+    public static Date localDateTimeToDate(LocalDateTime localDateTime) {
+        Instant instant = localDateTime
+                .atZone(ZoneId.systemDefault())
+                .toInstant();
+        return Date.from(instant);
+    }
+
+
+    /**
+     * LocalDate --> Date
+     *
+     * @param localDate
+     * @return
+     */
+    public static Date localDateToDate(LocalDate localDate) {
+        Instant instant = localDate
+                .atStartOfDay()
+                .atZone(ZoneId.systemDefault())
+                .toInstant();
+        return Date.from(instant);
+    }
+
+    /**
+     * LocalTime --> Date
+     *
+     * @param localTime
+     * @return
+     */
+    public static Date localTimeToDate(LocalTime localTime) {
+        Instant instant = LocalDateTime
+                .of(LocalDate.now(), localTime)
+                .atZone(ZoneId.systemDefault())
+                .toInstant();
+        return Date.from(instant);
+    }
+
+    /**
+     * @param date
+     * @return
+     */
+
+    public static Date stringToDate(String date) {
+        Instant instant = LocalDate
+                .parse(date, getFormatter(YYYY_MM_DD))
+                .atStartOfDay()
+                .atZone(ZoneId.systemDefault())
+                .toInstant();
+        return Date.from(instant);
+    }
+
+    /**
+     * @param dateTime
+     * @return
+     */
+    public static Date stringToDateTime(String dateTime) {
+        Instant instant = LocalDateTime
+                .parse(dateTime, getFormatter(YYYY_MM_DD_HH_MM_SS))
+                .atZone(ZoneId.systemDefault())
+                .toInstant();
+        return Date.from(instant);
     }
 }

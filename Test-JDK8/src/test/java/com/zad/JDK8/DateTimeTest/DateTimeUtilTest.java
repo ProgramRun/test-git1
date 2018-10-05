@@ -10,6 +10,8 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 @Slf4j
 public class DateTimeUtilTest {
@@ -53,7 +55,22 @@ public class DateTimeUtilTest {
 
     @Test
     public void t2() {
-        Date date = DateTimeUtil.parseDate("1990-02-07 12:12:12", DateTimeUtil.YYYY_MM_DD_HH_MM_SS);
-        System.out.println(date);
+        Runnable hellos = () -> {
+            for (int i = 1; i <= 1000; i++)
+                System.out.println("Hello	" + i);
+        };
+        Runnable goodbyes = () -> {
+            for (int i = 1; i <= 1000; i++)
+                System.out.println("Goodbye	" + i);
+        };
+        ExecutorService executor = Executors.newCachedThreadPool();
+        executor.execute(hellos);
+        executor.execute(goodbyes);
+        //executor.shutdown();
+    }
+
+    @Test
+    public void t3(){
+        System.out.println(LocalDate.now().toEpochDay());
     }
 }
