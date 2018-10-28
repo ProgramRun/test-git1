@@ -7,7 +7,7 @@
         </layout>
     </appender>
 
-    <root level="info">
+    <root level="info,debug">
         <appender-ref ref="consoleLog" />
     </root>
 </configuration>

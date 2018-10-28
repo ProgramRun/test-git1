@@ -1,6 +1,6 @@
 package com.zad.JDK8.DateTimeTest;
 
-import com.zad.JDK8.DateAPI.DateTimeUtil;
+import com.zad.JDK8.util.DateTimeUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

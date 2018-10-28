@@ -1,4 +1,4 @@
-package com.zad.JDK8.DateAPI;
+package com.zad.JDK8.util;
 
 
 import org.apache.commons.lang3.StringUtils;
@@ -18,13 +18,13 @@ import java.util.concurrent.ConcurrentMap;
  */
 public class DateTimeUtil {
 
-    private static final ConcurrentMap<String, DateTimeFormatter> FORMATTER_CACHE = new ConcurrentHashMap<>();
+    private static final ConcurrentMap<String, DateTimeFormatter> FORMATTER_CACHE = new ConcurrentHashMap<>(16);
 
-    private static final int PATTERN_CACHE_SIZE = 30;
+    private static int PATTERN_CACHE_SIZE = 30;
 
-    public static final String YYYY_MM_DD = "yyyy-MM-dd";
+    public static String YYYY_MM_DD = "yyyy-MM-dd";
 
-    public static final String YYYY_MM_DD_HH_MM_SS = "yyyy-MM-dd HH:mm:ss";
+    public static String YYYY_MM_DD_HH_MM_SS = "yyyy-MM-dd HH:mm:ss";
 
     private DateTimeUtil() {
         throw new AssertionError("Util禁止实例化");

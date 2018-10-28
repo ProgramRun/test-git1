@@ -2,6 +2,10 @@ package com.zad.JDK8.common;
 
 import lombok.Builder;
 import lombok.Data;
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.Date;
+import java.util.Objects;
 
 /**
  * 描述:
@@ -12,7 +16,7 @@ import lombok.Data;
  */
 @Builder
 @Data
-public class Person {
+public class Person implements Comparable<Person> {
     private String givenName;
 
     private String surName;
@@ -27,5 +31,22 @@ public class Person {
 
     private String address;
 
+    private Date birthday;
 
+    public Date getBirthday() {
+        return (Date) birthday.clone();
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        if (Objects.isNull(o)) {
+            throw new NullPointerException("input is null");
+        }
+
+        if (!this.givenName.equals(o.givenName)) {
+            return StringUtils.compare(this.givenName, o.givenName);
+        }
+
+        return 0;
+    }
 }
