@@ -38,6 +38,7 @@
         <commons-pool2.version>2.6.0</commons-pool2.version>
         <jedis.version>2.9.0</jedis.version>
         <jjwt.version>0.9.1</jjwt.version>
+        <joda-time.version>2.9.9</joda-time.version>
     </properties>
     <build>
         <plugins>
@@ -177,6 +178,12 @@
                 <version>${jjwt.version}</version>
             </dependency>
 
+            <!-- https://mvnrepository.com/artifact/joda-time/joda-time -->
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda-time.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
