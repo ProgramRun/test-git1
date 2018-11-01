@@ -1,23 +1,20 @@
 package com.zad.JDK8.DateTimeTest;
 
-import com.zad.JDK8.common.Person;
-import com.zad.JDK8.util.DateTimeUtil;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
-import java.util.*;
+import java.util.UUID;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * 描述:
+ * 描述: java本身api测试
  *
  * @author zad
  * @create 2018-10-05 15:10
  */
-public class UtilTest {
+public class JavaTest {
 
     private static final CountDownLatch count = new CountDownLatch(2);
 
@@ -37,55 +34,9 @@ public class UtilTest {
         System.out.println("ha ha~~");
     }
 
-    @Test
-    public void testArrayList() {
-        ArrayList<String> list = new ArrayList<>();
-        list.trimToSize();
-        String s = "aaa";
-        Class<? extends String> aClass = s.getClass();
-        System.out.println(aClass.getClass().getName() + " " + aClass.getName() + " " + aClass.getSimpleName());
-        ListIterator<String> li;
-    }
 
     @Test
-    public void testEqual() {
-        System.out.println(Objects.equals("aaa", "aaa"));
-        System.out.println(Arrays.equals(new int[]{1, 2, 3}, new int[]{1, 2, 3}));
-        System.out.println(Objects.hashCode("aaa"));
-        System.out.println(Objects.hash("aaa", 111));
-        System.out.println(Double.hashCode(1.111));
-        System.out.println(Integer.hashCode(1));
-        System.out.println(System.out);
-    }
-
-    @Test
-    public void testDate() {
-        Person zad = Person.builder()
-                .birthday(DateTimeUtil.localDateToDate(LocalDate.of(1990, 02, 07)))
-                .age(10)
-                .givenName("zad1")
-                .build();
-        Person zad1 = Person.builder()
-                .birthday(DateTimeUtil.localDateToDate(LocalDate.of(1990, 02, 07)))
-                .age(9)
-                .givenName("zad2")
-                .build();
-        Person zad2 = Person.builder()
-                .birthday(DateTimeUtil.localDateToDate(LocalDate.of(1990, 02, 07)))
-                .age(5)
-                .givenName("zad3")
-                .build();
-
-        List<Person> plist = new ArrayList<>();
-        plist.add(zad);
-        plist.add(zad1);
-        plist.add(zad2);
-        Collections.sort(plist, Comparator.comparingInt(Person::getAge));
-        System.out.println(plist);
-    }
-
-    @Test
-    public void testString() {
+    public void testInt2String() {
         int[] intArr = new int[1000000];
         String[] strArr1 = new String[1000000];
 
@@ -126,3 +77,6 @@ public class UtilTest {
         System.out.println("num + \"\" : " + (e3 - s3));
     }
 }
+
+
+
