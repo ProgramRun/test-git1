@@ -7,6 +7,7 @@ package com.zad.JDK8.util;
  * @create 2018-10-30 15:15
  */
 
+
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
@@ -15,6 +16,10 @@ import org.joda.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class JodaTimeUtil {
+
+    private JodaTimeUtil() {
+        throw new AssertionError("Util禁止实例化");
+    }
 
     public static final String STANDARD_FORMAT = "yyyy-MM-dd HH:mm:ss";
 
