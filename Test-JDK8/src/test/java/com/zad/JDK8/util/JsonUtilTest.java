@@ -3,6 +3,7 @@ package com.zad.JDK8.util;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
+import java.util.Objects;
 
 class JsonUtilTest {
 
@@ -18,13 +19,13 @@ class JsonUtilTest {
     void string2Obj() {
         User zad = User.newBuilder()
                 .birthday(new Date())
-                .id(111)
                 .username("zad")
                 .build();
         System.out.println(JsonUtil.obj2String(zad));
 
-        String user = "{\"username\":\"zad\",\"id\":111,\"birthday\":\"2018-11-01 20:34:53\"}";
-        System.out.println(JsonUtil.string2Obj(user, User.class));
+        String user = "{\"username\":\"zad\",\"birthday\":\"2018-11-01 20:34:53\"}";
+        User u1 = JsonUtil.string2Obj(user, User.class);
+        System.out.println(Objects.isNull(u1.getId()));
     }
 
     @Test

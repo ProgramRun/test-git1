@@ -6,68 +6,83 @@ import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
 import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
+
+import java.util.regex.Pattern;
 
 /**
  * 描述:
- * 汉字转韩语拼音
+ * 汉字转韩语拼音util
  *
  * @author zad
  * @create 2018-11-01 12:25
  */
 public class PinYinUtil {
     /**
+     * 汉语拼音format
+     */
+    private static final HanyuPinyinOutputFormat hanyuPinyinOutputFormat = new HanyuPinyinOutputFormat();
+
+    /**
+     * 汉字对应正则表达式 pattern
+     */
+    private static final Pattern chineseCharacterPattern = Pattern.compile("[\\u4E00-\\u9FA5]");
+
+    static {
+        hanyuPinyinOutputFormat.setCaseType(HanyuPinyinCaseType.LOWERCASE);
+        hanyuPinyinOutputFormat.setToneType(HanyuPinyinToneType.WITHOUT_TONE);
+        hanyuPinyinOutputFormat.setVCharType(HanyuPinyinVCharType.WITH_V);
+    }
+
+    private PinYinUtil() {
+        throw new AssertionError("Util禁止外部实例化");
+    }
+
+    /**
      * 得到 全拼
      *
-     * @param src
+     * @param chineseCharacter
      * @return
      */
-    public static String getPingYin(String src) {
-        char[] t1 = null;
-        t1 = src.toCharArray();
-        String[] t2 = new String[t1.length];
-        HanyuPinyinOutputFormat t3 = new HanyuPinyinOutputFormat();
-        t3.setCaseType(HanyuPinyinCaseType.LOWERCASE);
-        t3.setToneType(HanyuPinyinToneType.WITHOUT_TONE);
-        t3.setVCharType(HanyuPinyinVCharType.WITH_V);
-        String t4 = "";
-        int t0 = t1.length;
+    public static String getPingYin(String chineseCharacter) {
+        char[] req = chineseCharacter.toCharArray();
+        int size = req.length;
+        StringBuilder sb = new StringBuilder();
         try {
-            for (int i = 0; i < t0; i++) {
+            for (int i = 0; i < size; i++) {
                 // 判断是否为汉字字符
-                if (java.lang.Character.toString(t1[i]).matches("[\\u4E00-\\u9FA5]+")) {
-                    t2 = PinyinHelper.toHanyuPinyinStringArray(t1[i], t3);
-                    t4 += t2[0];
+                if (chineseCharacterPattern.matcher(String.valueOf(req[i])).matches()) {
+                    sb.append(PinyinHelper.toHanyuPinyinStringArray(req[i], hanyuPinyinOutputFormat)[0]);
                 } else {
-                    t4 += java.lang.Character.toString(t1[i]);
+                    sb.append(Character.toString(req[i]));
                 }
             }
-            return t4;
         } catch (BadHanyuPinyinOutputFormatCombination e1) {
             e1.printStackTrace();
         }
-        return t4;
+        return sb.toString();
     }
 
     /**
      * 得到中文首字母（包括字符串中字母）
      *
-     * @param str
+     * @param chineseCharacter
      * @return
      */
-    public static String getPinYinHeadChar(String str) {
-
-        String convert = "";
-        for (int j = 0; j < str.length(); j++) {
-            char word = str.charAt(j);
+    public static String getPinYinHeadChar(String chineseCharacter) {
+        StringBuilder res = new StringBuilder();
+        int size = chineseCharacter.length();
+        for (int j = 0; j < size; j++) {
+            char word = chineseCharacter.charAt(j);
             String[] pinyinArray = PinyinHelper.toHanyuPinyinStringArray(word);
-            if (pinyinArray != null) {
-                convert += pinyinArray[0].charAt(0);
+            if (ArrayUtils.isNotEmpty(pinyinArray)) {
+                res.append(pinyinArray[0].charAt(0));
             } else {
-                convert += word;
+                res.append(word);
             }
         }
-        return convert;
+        return res.toString();
     }
 
     /**

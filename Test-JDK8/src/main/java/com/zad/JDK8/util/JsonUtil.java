@@ -24,7 +24,10 @@ public class JsonUtil {
 
     static {
         // 对象字段全部列入
-        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_DEFAULT);
+        objectMapper.setSerializationInclusion(JsonInclude.Include.ALWAYS);
+
+        /*// 将对象非空字段转为json
+        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL); */
 
         // 取消默认转换timestamps形式
         objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
@@ -37,6 +40,10 @@ public class JsonUtil {
 
         // 忽略在json字符串中存在,但是在java对象中不存在对应属性的情况
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+    }
+
+    private JsonUtil() {
+        throw new AssertionError("Util禁止外部实例化");
     }
 
     /**

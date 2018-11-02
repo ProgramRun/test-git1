@@ -2,6 +2,7 @@ package com.zad.JDK8.common;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.extern.java.Log;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Date;
@@ -16,6 +17,7 @@ import java.util.Objects;
  */
 @Builder
 @Data
+@Log
 public class Person implements Comparable<Person> {
     private String givenName;
 
@@ -32,7 +34,6 @@ public class Person implements Comparable<Person> {
     private String address;
 
     private Date birthday;
-
 
     public Date getBirthday() {
         return (Date) birthday.clone();
@@ -51,6 +52,8 @@ public class Person implements Comparable<Person> {
         return 0;
     }
 
-
-
+    public static void main(String[] args) {
+        System.out.println(log.getClass());
+        log.info("app");
+    }
 }
