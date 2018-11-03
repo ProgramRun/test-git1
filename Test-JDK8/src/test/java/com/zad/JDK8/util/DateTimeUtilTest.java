@@ -12,15 +12,15 @@ import java.util.Date;
 
 @Slf4j
 public class DateTimeUtilTest {
-    private static Date date;
+    private Date date;
 
     @BeforeEach
-    public void init() {
+     void init() {
         date = new Date();
     }
 
     @Test
-    public void t1() {
+     void t1() {
         // 格式化输出
         String d1 = DateTimeUtil.format(date, "yyyy/MM/dd HH:mm:ss");
         log.info("yyyy/MM/dd hh:mm:ss --> {}", d1);

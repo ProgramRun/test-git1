@@ -19,7 +19,7 @@ import java.text.SimpleDateFormat;
  * @author zad
  * @create 2018-11-01 19:45
  */
-public class JsonUtil {
+public final class JsonUtil {
     private static ObjectMapper objectMapper = new ObjectMapper();
 
     static {
@@ -43,7 +43,7 @@ public class JsonUtil {
     }
 
     private JsonUtil() {
-        throw new AssertionError("Util禁止外部实例化");
+        throw new AssertionError("Util禁止反射实例化");
     }
 
     /**

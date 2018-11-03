@@ -15,10 +15,10 @@ import org.joda.time.format.DateTimeFormatter;
 
 import java.util.Date;
 
-public class JodaTimeUtil {
+public final class JodaTimeUtil {
 
     private JodaTimeUtil() {
-        throw new AssertionError("Util禁止实例化");
+        throw new AssertionError("Util禁止反射实例化");
     }
 
     public static final String STANDARD_FORMAT = "yyyy-MM-dd HH:mm:ss";

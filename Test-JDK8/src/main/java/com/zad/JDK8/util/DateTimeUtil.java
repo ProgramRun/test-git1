@@ -16,7 +16,7 @@ import java.util.concurrent.ConcurrentMap;
  * @author zad
  * @create 2018-09-08 15:50
  */
-public class DateTimeUtil {
+public final class DateTimeUtil {
 
     private static final ConcurrentMap<String, DateTimeFormatter> FORMATTER_CACHE = new ConcurrentHashMap<>(16);
 
@@ -27,7 +27,7 @@ public class DateTimeUtil {
     public static String YYYY_MM_DD_HH_MM_SS = "yyyy-MM-dd HH:mm:ss";
 
     private DateTimeUtil() {
-        throw new AssertionError("Util禁止外部实例化");
+        throw new AssertionError("Util禁止反射实例化");
     }
 
 
