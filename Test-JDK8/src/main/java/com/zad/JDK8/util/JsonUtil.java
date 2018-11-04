@@ -13,7 +13,7 @@ import java.text.SimpleDateFormat;
 
 
 /**
- * 描述:
+ * 描述: 来源 https://blog.csdn.net/SUDDEV/article/details/78670492
  * JsonUtil
  *
  * @author zad
@@ -27,7 +27,7 @@ public final class JsonUtil {
         objectMapper.setSerializationInclusion(JsonInclude.Include.ALWAYS);
 
         /*// 将对象非空字段转为json
-        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL); */
+        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);*/
 
         // 取消默认转换timestamps形式
         objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);

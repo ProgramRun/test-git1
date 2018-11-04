@@ -24,9 +24,17 @@
 	
 	主要的方法有两个,format(格式化)和parse(\解析)
 
+
+
+
+
 # Lambda表达式
 
 参考文献: https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html
+
+
+
+
 
 
 
@@ -39,15 +47,15 @@
 ![img](http://ww1.sinaimg.cn/mw690/7178f37egw1etbmyb4jugj20ku0ajmy0.jpg)
 
 	从一个节点GC ROOT开始，寻找对应的引用节点，找到这个节点以后，继续寻找这个节点的引用节点，当所有的引用节点寻找完毕之后，剩余的节点则被认为是没有被引用到的节点，即无用的节点.
-
+	
 	java中可作为GC Root的对象有
-
+	
 	1.虚拟机栈中引用的对象（本地变量表）
-
+	
 	2.方法区中静态属性引用的对象
-
+	
 	3.方法区中常量引用的对象
-
+	
 	4.本地方法栈中引用的对象（Native对象）
 
 ## 垃圾回收算法
@@ -230,4 +238,20 @@ Parallel Scavenge收集器的老年代版本，并行收集器，吞吐量优先
 3.其他阻塞 -- 通过调用线程的sleep()或join()或发出了I/O请求时，线程会进入到阻塞状态。当sleep()状态超时、join()等待线程终止或者超时、或者I/O处理完毕时，线程重新转入就绪状态。
 
 **死亡状态（Dead）：**线程执行完了或者因异常退出了run()方法，该线程结束生命周期。
+
+
+
+# ConcurrentApi
+
+## LinkedBlockingQueue与ArrayBlockingQueue
+
+参考资料: https://blog.csdn.net/javazejian/article/details/77410889?locationNum=1&fps=1
+
+# AtomicInteger
+
+参考资料: https://www.cnblogs.com/rever/p/8215743.html
+
+
+
+
 
