@@ -52,7 +52,7 @@ public final class PinYinUtil {
      */
     public static String getPingYin(String chineseCharacter) {
         if (StringUtils.isBlank(chineseCharacter)) {
-            return "";
+            return StringUtils.EMPTY;
         }
         StringBuilder sb = new StringBuilder();
         try {
@@ -60,10 +60,10 @@ public final class PinYinUtil {
                 if (CHINESE_CHARACTER_PATTERN.matcher(String.valueOf(cc)).matches()) {
                     sb.append(PinyinHelper.toHanyuPinyinStringArray(cc, PINYIN_OUTPUT_FORMAT)[0]);
                 }
-                // 如果是字母,直接添加
+                /*// 如果是字母,直接添加
                 if (CHARACTER_PATTERN.matcher(String.valueOf(cc)).matches()) {
                     sb.append(cc);
-                }
+                }*/
             }
         } catch (BadHanyuPinyinOutputFormatCombination e1) {
             e1.printStackTrace();
@@ -79,17 +79,17 @@ public final class PinYinUtil {
      */
     public static String getPinYinInitialLetter(String chineseCharacter) {
         if (StringUtils.isBlank(chineseCharacter)) {
-            return "";
+            return StringUtils.EMPTY;
         }
         StringBuilder sb = new StringBuilder(chineseCharacter.length());
         for (char cc : chineseCharacter.toCharArray()) {
             if (CHINESE_CHARACTER_PATTERN.matcher(String.valueOf(cc)).matches()) {
                 sb.append(PinyinHelper.toHanyuPinyinStringArray(cc)[0].charAt(0));
             }
-            // 如果是字母,直接添加
+            /*// 如果是字母,直接添加
             if (CHARACTER_PATTERN.matcher(String.valueOf(cc)).matches()) {
                 sb.append(cc);
-            }
+            }*/
         }
         return sb.toString();
     }

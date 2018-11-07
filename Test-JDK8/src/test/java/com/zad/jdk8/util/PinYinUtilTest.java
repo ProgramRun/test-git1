@@ -12,8 +12,9 @@ class PinYinUtilTest {
     }
 
     @Test
-    void getPinYinInitialLetter() {
+    void getPinYinInitialLetter() throws ClassNotFoundException {
         System.out.println(PinYinUtil.getPinYinInitialLetter("你好ccc,china"));
+        System.out.println(PinYinUtilTest.class.getClassLoader().loadClass("com.zad.jdk8.util.DateTimeUtilTest").getSimpleName());
     }
 
 }

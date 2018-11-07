@@ -30,7 +30,9 @@
 
 # Lambda表达式
 
-参考文献: https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html
+参考文献: 
+
+1. https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Lambda-QuickStart/index.html
 
 
 
@@ -40,7 +42,9 @@
 
 # 垃圾回收器
 
-参考文献:https://www.cnblogs.com/andy-zcx/p/5522836.html
+参考文献:
+
+1. https://www.cnblogs.com/andy-zcx/p/5522836.html
 
 ## 判断对象是否被引用--根搜索算法(GC Root)
 
@@ -144,7 +148,9 @@ Parallel Scavenge收集器的老年代版本，并行收集器，吞吐量优先
 
 **G1收集器(Garbage first)**
 
-参考文献:https://blog.csdn.net/coderlius/article/details/79272773
+参考文献:
+
+1. https://blog.csdn.net/coderlius/article/details/79272773
 
 ### GC执行机制
 
@@ -174,7 +180,9 @@ Parallel Scavenge收集器的老年代版本，并行收集器，吞吐量优先
 
 ## 线程的生命周期
 
-参考文献: https://blog.csdn.net/pange1991/article/details/53860651
+参考文献: 
+
+1. https://blog.csdn.net/pange1991/article/details/53860651
 
 
 
@@ -243,15 +251,32 @@ Parallel Scavenge收集器的老年代版本，并行收集器，吞吐量优先
 
 # ConcurrentApi
 
+参考资料:
+
+1. https://blog.csdn.net/javazejian/article/details/76167357
+2. https://blog.csdn.net/javazejian/article/details/72828483
+3. https://blog.csdn.net/javazejian/article/details/75043422
+4. https://blog.csdn.net/javazejian/article/details/77410889
+
 ## LinkedBlockingQueue与ArrayBlockingQueue
 
-参考资料: https://blog.csdn.net/javazejian/article/details/77410889?locationNum=1&fps=1
+参考资料:
+
+1. https://blog.csdn.net/javazejian/article/details/77410889?locationNum=1&fps=1
 
 # AtomicInteger
 
-参考资料: https://www.cnblogs.com/rever/p/8215743.html
+参考资料:
+
+1. https://www.cnblogs.com/rever/p/8215743.html
 
 
 
 
 
+# NIO
+
+参考资料:
+
+1. https://www.ibm.com/developerworks/cn/education/java/j-nio/j-nio.html
+2. http://tutorials.jenkov.com/java-nio/index.html

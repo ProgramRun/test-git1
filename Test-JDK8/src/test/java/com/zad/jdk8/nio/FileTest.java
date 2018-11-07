@@ -3,16 +3,17 @@ package com.zad.jdk8.nio;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
-import java.nio.ByteBuffer;
+import java.io.IOException;
 import java.util.Arrays;
 
 /**
  * 描述:
  *
  * @author zad
- * @create 2018-11-06 16:06
+ * @create 2018-11-06 8:05
  */
-class NioTest {
+class FileTest {
+
     private static void fileData(File f) {
         System.out.println(
                 " 绝对路径：" + f.getAbsolutePath() +
@@ -31,7 +32,7 @@ class NioTest {
     }
 
     @Test
-    void fileTest1() {
+    void test1() {
         // 获取当前目录
         File path = new File(".");// .表示当前目录
         // 文件路径名数组
@@ -45,30 +46,8 @@ class NioTest {
             System.out.println(dirItem);
     }
 
-
     @Test
-    void fileTest2() {
-        // 获取src目录
-        File file = new File("src");
-        // file详细操作
-        fileData(file);
-    }
-
-    @Test
-    void wrapTest() {
-        byte[] array = new byte[1024];
-        ByteBuffer bf = ByteBuffer.wrap(array);
-        for (int i = 0; i < 128; i++) {
-            bf.putInt(i);
-        }
-        // 数据已经存入array中
-        for (byte b : array) {
-            System.out.println(b);
-        }
-    }
-
-    @Test
-    void sliceTest() {
+    void t2() throws IOException {
 
     }
 }
