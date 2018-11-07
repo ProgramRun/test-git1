@@ -21,6 +21,7 @@ public class FastCopyFile {
         FileChannel fcin = fin.getChannel();
         FileChannel fcout = fout.getChannel();
 
+        // 注意,分配了直接缓冲区,即使用了allocateDirect
         ByteBuffer buffer = ByteBuffer.allocateDirect(1024);
 
         while (true) {

@@ -21,8 +21,8 @@ public class SliceBuffer {
             slice.put(i, b);
         }
 
-        buffer.position(0);
-        buffer.limit(buffer.capacity());
+        //buffer.position(0);
+        //buffer.limit(buffer.capacity());
 
         while (buffer.remaining() > 0) {
             System.out.println(buffer.get());

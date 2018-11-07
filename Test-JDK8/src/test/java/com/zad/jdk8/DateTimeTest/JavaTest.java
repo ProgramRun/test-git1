@@ -14,14 +14,14 @@ import java.util.concurrent.Executors;
  * @author zad
  * @create 2018-10-05 15:10
  */
-public class JavaTest {
+class JavaTest {
 
     private static final CountDownLatch count = new CountDownLatch(2);
 
     private static final CyclicBarrier count2 = new CyclicBarrier(5);
 
     @Test
-    public void testCountDownLatch() throws InterruptedException {
+    void testCountDownLatch() throws InterruptedException {
         ExecutorService es = Executors.newCachedThreadPool();
         for (int i = 0; i < 5; i++) {
             es.execute(() -> {
@@ -36,7 +36,7 @@ public class JavaTest {
 
 
     @Test
-    public void testInt2String() {
+    void testInt2String() {
         int[] intArr = new int[1000000];
         String[] strArr1 = new String[1000000];
 

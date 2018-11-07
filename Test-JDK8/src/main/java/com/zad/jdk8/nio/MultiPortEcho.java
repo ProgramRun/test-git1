@@ -96,16 +96,18 @@ public class MultiPortEcho {
     }
 
     static public void main(String args[]) throws Exception {
-        if (args.length <= 0) {
+        /*if (args.length <= 0) {
             System.err.println("Usage: java MultiPortEcho port [port port ...]");
             System.exit(1);
-        }
+        }*/
 
-        int ports[] = new int[args.length];
+        /*int ports[] = new int[args.length];
 
         for (int i = 0; i < args.length; ++i) {
             ports[i] = Integer.parseInt(args[i]);
-        }
+        }*/
+
+        int[] ports = {1024, 1025, 1026};
 
         new MultiPortEcho(ports);
     }

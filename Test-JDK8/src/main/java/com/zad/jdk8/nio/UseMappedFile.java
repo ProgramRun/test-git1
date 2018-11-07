@@ -1,5 +1,7 @@
 package com.zad.jdk8.nio;// $Id$
 
+import com.zad.jdk8.util.PathUtil;
+
 import java.io.RandomAccessFile;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
@@ -9,7 +11,8 @@ public class UseMappedFile {
     static private final int size = 1024;
 
     static public void main(String args[]) throws Exception {
-        RandomAccessFile raf = new RandomAccessFile("usemappedfile.txt", "rw");
+        System.out.println(PathUtil.getAppPath(UseMappedFile.class));
+        RandomAccessFile raf = new RandomAccessFile(".usemappedfile.txt", "rw");
         FileChannel fc = raf.getChannel();
 
         MappedByteBuffer mbb = fc.map(FileChannel.MapMode.READ_WRITE,
