@@ -5,10 +5,7 @@ import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
 import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
-import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 import org.apache.commons.lang3.StringUtils;
-
-import java.util.regex.Pattern;
 
 /**
  * 描述:
@@ -23,16 +20,6 @@ public final class PinYinUtil {
      */
     private static final HanyuPinyinOutputFormat PINYIN_OUTPUT_FORMAT = new HanyuPinyinOutputFormat();
 
-    /**
-     * 汉字对应正则表达式 pattern
-     */
-    private static final Pattern CHINESE_CHARACTER_PATTERN = Pattern.compile("[\\u4E00-\\u9FA5]");
-
-    /**
-     * 字母对应正则
-     */
-    private static final Pattern CHARACTER_PATTERN = Pattern.compile("[a-zA-Z]");
-
     static {
         PINYIN_OUTPUT_FORMAT.setCaseType(HanyuPinyinCaseType.LOWERCASE);
         PINYIN_OUTPUT_FORMAT.setToneType(HanyuPinyinToneType.WITHOUT_TONE);
@@ -44,53 +31,99 @@ public final class PinYinUtil {
     }
 
     /**
-     * 将chineseCharacter中汉字转为拼音,其余所有字符直接略过,
-     * 若需要额外处理,则需要额外判断
+     * 将汉字转为拼音,字母直接拼接,其余字符直接忽略
      *
      * @param chineseCharacter
      * @return
      */
-    public static String getPingYin(String chineseCharacter) {
+    public static String getPinYin(String chineseCharacter) {
         if (StringUtils.isBlank(chineseCharacter)) {
             return StringUtils.EMPTY;
         }
         StringBuilder sb = new StringBuilder();
-        try {
-            for (char cc : chineseCharacter.toCharArray()) {
-                if (CHINESE_CHARACTER_PATTERN.matcher(String.valueOf(cc)).matches()) {
-                    sb.append(PinyinHelper.toHanyuPinyinStringArray(cc, PINYIN_OUTPUT_FORMAT)[0]);
-                }
-                /*// 如果是字母,直接添加
-                if (CHARACTER_PATTERN.matcher(String.valueOf(cc)).matches()) {
-                    sb.append(cc);
-                }*/
+        for (char cc : chineseCharacter.toCharArray()) {
+            // 无法识别的汉字跳过
+            String[] res = getPinYinStringArray(cc);
+            boolean flag = (res != null) && isChineseCharacter(StringUtils.EMPTY + cc);
+            if (flag) {
+                sb.append(res[0]);
+                continue;
             }
-        } catch (BadHanyuPinyinOutputFormatCombination e1) {
-            e1.printStackTrace();
+            if (isCharacterOrDigits(StringUtils.EMPTY + cc)) {
+                sb.append(cc);
+            }
         }
         return sb.toString();
     }
 
     /**
-     * 将chineseCharacter中汉字转为拼音并获取首字母,其余所有字符直接略过,
+     * 得到中文首字母（包括字符串中字母）,字母直接拼接,其余字符直接忽略
      *
      * @param chineseCharacter
      * @return
      */
-    public static String getPinYinInitialLetter(String chineseCharacter) {
+    public static String getPinYinHeadChar(String chineseCharacter) {
         if (StringUtils.isBlank(chineseCharacter)) {
             return StringUtils.EMPTY;
         }
         StringBuilder sb = new StringBuilder(chineseCharacter.length());
         for (char cc : chineseCharacter.toCharArray()) {
-            if (CHINESE_CHARACTER_PATTERN.matcher(String.valueOf(cc)).matches()) {
-                sb.append(PinyinHelper.toHanyuPinyinStringArray(cc)[0].charAt(0));
+            // 无法识别的汉字跳过
+            String[] res = getPinYinStringArray(cc);
+            boolean flag = (res != null) && isChineseCharacter(StringUtils.EMPTY + cc);
+            if (flag) {
+                sb.append(res[0].charAt(0));
+                continue;
             }
-            /*// 如果是字母,直接添加
-            if (CHARACTER_PATTERN.matcher(String.valueOf(cc)).matches()) {
+            if (isCharacterOrDigits(StringUtils.EMPTY + cc)) {
                 sb.append(cc);
-            }*/
+            }
         }
         return sb.toString();
+    }
+
+    /**
+     * 将字符串转移为ASCII码
+     *
+     * @param cnStr
+     * @return
+     */
+    public static String getCnASCII(String cnStr) {
+        byte[] bGBK = cnStr.getBytes();
+        StringBuilder strBuf = new StringBuilder(bGBK.length);
+        for (int i = 0; i < bGBK.length; i++) {
+            strBuf.append(String.format("%02x", bGBK[i]));
+        }
+        return strBuf.toString();
+    }
+
+    /**
+     * 将汉字转换为拼音
+     *
+     * @param cc
+     * @return
+     */
+    private static String[] getPinYinStringArray(char cc) {
+        return PinyinHelper.toHanyuPinyinStringArray(cc);
+    }
+
+    /**
+     * 是否为汉字
+     *
+     * @param input
+     * @return
+     */
+    private static boolean isChineseCharacter(CharSequence input) {
+        return RegexEnum.CHINESE_CHARACTER_PATTERN.getPattern().matcher(input).matches();
+    }
+
+    /**
+     * 是否为字母或数字
+     *
+     * @param input
+     * @return
+     */
+    private static boolean isCharacterOrDigits(CharSequence input) {
+        return RegexEnum.CHARACTER_DIGITS_PATTERN.getPattern().matcher(input).matches();
     }
 }
