@@ -40,27 +40,27 @@ public final class JodaTimeUtil {
      * 将 dateTimeStr 按照 formatStr格式转为 Date
      * dateTimeStr和 formatStr格式需要统一
      *
-     * @param dateTimeStr
-     * @param formatStr
+     * @param dateTime
+     * @param pattern
      * @return
      */
-    public static Date strToDate(@NonNull String dateTimeStr, @NonNull String formatStr) {
-        DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern(formatStr);
-        DateTime dateTime = dateTimeFormatter.parseDateTime(dateTimeStr);
-        return dateTime.toDate();
+    public static Date strToDate(@NonNull String dateTime, @NonNull String pattern) {
+        DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern(pattern);
+        DateTime res = dateTimeFormatter.parseDateTime(dateTime);
+        return res.toDate();
     }
 
     /**
      * 将 dateTimeStr 转为 Date
      * dateTimeStr格式必须符合默认时间格式
      *
-     * @param dateTimeStr
+     * @param dateTime
      * @return
      */
-    public static Date strToDate(@NonNull String dateTimeStr) {
+    public static Date strToDate(@NonNull String dateTime) {
         DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern(DEFAULT_DATE_TIME);
-        DateTime dateTime = dateTimeFormatter.parseDateTime(dateTimeStr);
-        return dateTime.toDate();
+        DateTime res = dateTimeFormatter.parseDateTime(dateTime);
+        return res.toDate();
     }
 
     /**
@@ -68,12 +68,12 @@ public final class JodaTimeUtil {
      * 当 formatStr为null时,按照jodatime的默认格式输出
      *
      * @param date
-     * @param formatStr
+     * @param pattern
      * @return
      */
-    public static String dateToStr(@NonNull Date date, @NonNull String formatStr) {
-        DateTime dateTime = new DateTime(date.getTime());
-        return dateTime.toString(formatStr);
+    public static String dateToStr(@NonNull Date date, @NonNull String pattern) {
+        DateTime res = new DateTime(date.getTime());
+        return res.toString(pattern);
     }
 
     /**
@@ -169,6 +169,12 @@ public final class JodaTimeUtil {
     public static Date withMonthOfYear(@NonNull Date date, int monthOfYear) {
         DateTime dateTime = new DateTime(date.getTime());
         return dateTime.withMonthOfYear(monthOfYear).toDate();
+    }
+
+
+    public static Date withDayOfYear(@NonNull Date date, int dayOfYear) {
+        DateTime dateTime = new DateTime(date.getTime());
+        return dateTime.withDayOfYear(dayOfYear).toDate();
     }
 
     /**
