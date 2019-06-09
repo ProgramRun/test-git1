@@ -36,7 +36,7 @@ public class Person implements Comparable<Person> {
     private Date birthday;
 
     public Date getBirthday() {
-        return (Date) birthday.clone();
+        return birthday == null ? null : (Date) birthday.clone();
     }
 
     @Override
