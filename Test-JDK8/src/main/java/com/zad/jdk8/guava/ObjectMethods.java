@@ -4,8 +4,6 @@ import com.google.common.base.MoreObjects;
 import com.zad.jdk8.common.Person;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.Objects;
-
 /**
  * 描述:
  * ObjectMethods
@@ -16,17 +14,11 @@ import java.util.Objects;
 @Slf4j
 public class ObjectMethods {
     public static void main(String[] args) {
-        // JDK7 以后在java.util包内集成了该功能
-        boolean equals = Objects.equals("a", "a");
-        log.info("校验对象是否相等 -> {}", equals);
+        Person p = Person.builder().givenName("zzz").address("sfff").build();
+        log.info(p.toString());
+        String res = MoreObjects.toStringHelper(Person.class)
+                .add("surName", "aaa").add("aa","33").add("dd",null).omitNullValues().toString();
+        log.info(res);
 
-        boolean equals1 = Objects.equals(null, null);
-
-        log.info("校验对象是否相等 -> {}", equals1);
-
-
-        String res = MoreObjects.toStringHelper(Person.builder().givenName("zzz").address("sfff").build())
-                .add("surName", "aaa").toString();
-        System.out.println(res);
     }
 }

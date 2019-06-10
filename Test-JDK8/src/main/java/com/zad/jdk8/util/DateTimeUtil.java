@@ -28,7 +28,7 @@ public final class DateTimeUtil {
 
     private static final ConcurrentMap<String, DateTimeFormatter> FORMATTER_CACHE = new ConcurrentHashMap<>(16);
 
-    private static int PATTERN_CACHE_SIZE = 50;
+    private static final int PATTERN_CACHE_SIZE = 50;
 
     public static String DEFAULT_DATE_TIME = "yyyy-MM-dd HH:mm:ss";
     public static final String DEFAULT_DATE = "yyyy-MM-dd";

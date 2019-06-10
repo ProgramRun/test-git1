@@ -3,8 +3,9 @@ package com.zad.jdk8.nio;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 描述:
@@ -47,7 +48,24 @@ class FileTest {
     }
 
     @Test
-    void t2() throws IOException {
+    void t2() {
+        Map<Integer, Map<String, Integer>> map = new HashMap<>();
 
+        Map<String, Integer> m1 = new HashMap<>();
+        m1.put("age1", 1);
+        map.put(1, m1);
+        System.out.println(map.get(1));
+
+        Map<String, Integer> m2 = m1;
+        m2.put("age2", 2);
+        System.out.println(map.get(1));
+    }
+
+    @Test
+    void t3() {
+        long oneDaySeconds = 3600 * 24L;
+        long other = (3600 << 4) + (3600 << 3);
+        System.out.println(oneDaySeconds);
+        System.out.println(other);
     }
 }
