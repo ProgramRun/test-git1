@@ -45,8 +45,7 @@ public final class JodaTimeUtil {
      * @return
      */
     public static Date strToDate(@NonNull String dateTime, @NonNull String pattern) {
-        DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern(pattern);
-        DateTime res = dateTimeFormatter.parseDateTime(dateTime);
+        DateTime res = getDateTime(dateTime, pattern);
         return res.toDate();
     }
 
@@ -58,9 +57,13 @@ public final class JodaTimeUtil {
      * @return
      */
     public static Date strToDate(@NonNull String dateTime) {
-        DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern(DEFAULT_DATE_TIME);
-        DateTime res = dateTimeFormatter.parseDateTime(dateTime);
+        DateTime res = getDateTime(dateTime, DEFAULT_DATE_TIME);
         return res.toDate();
+    }
+
+    private static DateTime getDateTime(@NonNull String dateTime, @NonNull String pattern) {
+        DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern(pattern);
+        return dateTimeFormatter.parseDateTime(dateTime);
     }
 
     /**
@@ -172,6 +175,12 @@ public final class JodaTimeUtil {
     }
 
 
+    /**
+     * 指定日(一年中的第几天)
+     * @param date
+     * @param dayOfYear
+     * @return
+     */
     public static Date withDayOfYear(@NonNull Date date, int dayOfYear) {
         DateTime dateTime = new DateTime(date.getTime());
         return dateTime.withDayOfYear(dayOfYear).toDate();
@@ -723,6 +732,7 @@ public final class JodaTimeUtil {
     public static long getDifferentSeconds(@NonNull Date minuend, @NonNull Date subtrahend) {
         return (minuend.getTime() - subtrahend.getTime()) / TimeUnit.SECONDS.toMillis(1);
     }
+
 
 }
 

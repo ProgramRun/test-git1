@@ -15,26 +15,26 @@ public class CopyFile {
         String infile = args[0];
         String outfile = args[1];
 
-        FileInputStream fin = new FileInputStream(infile);
-        FileOutputStream fout = new FileOutputStream(outfile);
+        try (FileInputStream fin = new FileInputStream(infile);
+             FileOutputStream fout = new FileOutputStream(outfile)) {
+            FileChannel fcin = fin.getChannel();
+            FileChannel fcout = fout.getChannel();
 
-        FileChannel fcin = fin.getChannel();
-        FileChannel fcout = fout.getChannel();
+            ByteBuffer buffer = ByteBuffer.allocate(1024);
 
-        ByteBuffer buffer = ByteBuffer.allocate(1024);
+            while (true) {
+                buffer.clear();
 
-        while (true) {
-            buffer.clear();
+                int r = fcin.read(buffer);
 
-            int r = fcin.read(buffer);
+                if (r == -1) {
+                    break;
+                }
 
-            if (r == -1) {
-                break;
+                buffer.flip();
+
+                fcout.write(buffer);
             }
-
-            buffer.flip();
-
-            fcout.write(buffer);
         }
     }
 }
