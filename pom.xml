@@ -25,7 +25,6 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <junit.version>4.12</junit.version>
         <guava.version>26.0-jre</guava.version>
         <contiperf.version>2.3.4</contiperf.version>
         <commons-lang3.version>3.7</commons-lang3.version>
@@ -43,6 +42,7 @@
         <jackson-databind.version>2.9.8</jackson-databind.version>
         <pinyin4j.version>2.5.1</pinyin4j.version>
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
+        <commons-collections.version>3.2.1</commons-collections.version>
     </properties>
     <build>
         <plugins>
@@ -85,14 +85,6 @@
                 <version>${lombok.version}</version>
                 <scope>provided</scope>
             </dependency>
-
-            <!-- 日志输出的门面facade,可用于切换日志输出引擎,定制日志输出格式,并设置日志输出级别 -->
-            <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-           <!-- <dependency>
-                <groupId>org.slf4j</groupId>
-                <artifactId>slf4j-api</artifactId>
-                <version>${slf4j-api.version}</version>
-            </dependency>-->
 
             <!-- 打印日志api,依赖于logback-core -->
             <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
@@ -198,6 +190,28 @@
                 <groupId>commons-beanutils</groupId>
                 <artifactId>commons-beanutils</artifactId>
                 <version>${commons-beanutils.version}</version>
+            </dependency>
+
+
+            <!-- https://mvnrepository.com/artifact/commons-collections/commons-collections -->
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${commons-collections.version}</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.9</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.6</version>
             </dependency>
 
         </dependencies>

@@ -1,23 +1,14 @@
 package com.zad.jdk8.guava;
 
-import com.google.common.base.CharMatcher;
-import com.google.common.base.Joiner;
-import com.google.common.base.Optional;
-import com.google.common.base.Predicate;
-import com.google.common.base.Splitter;
-import com.google.common.base.Strings;
-import com.google.common.collect.Collections2;
-import com.google.common.collect.HashMultiset;
-import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import com.google.common.collect.Ordering;
-import com.google.common.collect.Sets;
+import com.google.common.base.*;
+import com.google.common.collect.*;
+import com.google.common.primitives.Doubles;
 import com.google.common.primitives.Ints;
 import com.google.common.primitives.UnsignedInteger;
 import com.zad.jdk8.common.Gender;
 import com.zad.jdk8.common.Person;
 import lombok.extern.slf4j.Slf4j;
+import org.checkerframework.checker.nullness.qual.Nullable;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
@@ -39,7 +30,7 @@ class GuavaTest {
 
     @BeforeAll
     static void init() {
-        strings = Lists.newArrayList("a1", "a12", "a12345", "a123", "a1234");
+        strings = Lists.newArrayList("a1", "a1", "a1", "a12", "a12345", "a123", "a1234");
 
         personList = Lists.newArrayList(
                 Person.builder().surName("z1").age(120).address("z1").gender(Gender.MAN).build(),
@@ -76,24 +67,29 @@ class GuavaTest {
 
         Ordering<String> stringOrdering = Ordering.natural().nullsLast().compound((String l, String r) -> Ints.compare(l.length(), r.length()));
         strings.sort(stringOrdering);
-        log.info("orderd list is -> {}", strings);
+        log.info("ordered list is -> {}", strings);
 
 
         Ordering<String> reverseOrder = Ordering.natural().reverse().nullsLast().compound((String l, String r) -> Ints.compare(l.length(), r.length()));
         strings.sort(reverseOrder);
-        log.info("orderd list is -> {}", strings);
+        log.info("ordered list is -> {}", strings);
     }
 
 
     @Test
     void multiSetTest() {
-        HashMultiset.create();
+        HashMultiset req = HashMultiset.create();
+        req.addAll(strings);
+
+        log.info("count -> {}", req.count("a1"));
+
+        log.info("set -> {}", req.elementSet());
     }
 
 
     @Test
     void joinerTest() {
-        List<String> res=null;
+        List<String> res = null;
         log.info("joiner test res is -> {}", Joiner.on(",").join(res));
 
         strings.add(null);
@@ -141,6 +137,8 @@ class GuavaTest {
     @Test
     void charMatcherTest() {
         log.info("match -> {}", CharMatcher.is('a').matchesAllOf("aaa"));
+
+        log.info("CaseFormat->{}", CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_UNDERSCORE, null));
     }
 
 
@@ -172,4 +170,83 @@ class GuavaTest {
         log.info("intersection res is -> {}", Sets.intersection(s1, s2));
 
     }
+
+    @Test
+    void doublesTest() {
+        log.info("double list -> {}", Doubles.asList(1.1, 2.2, 3.3));
+        log.info("doubles compare ->{}", Doubles.compare(1.1, 2.2));
+        log.info("concat ->{}", Doubles.concat(new double[]{1.1, 1.1}, new double[]{2.2, 2.2}, new double[]{3.3, 3.3}));
+        log.info("constrainToRange ->{}", Doubles.constrainToRange(2.5, 2.3, 2.8));
+        log.info("join ->{}", Doubles.join("/", 1.1, 1.2, 1.3));
+        log.info("toArray- >{}", Doubles.toArray(Lists.newArrayList(1.2, 1, 2, 1, 1.6)));
+        log.info("tryParse ->{}", Doubles.tryParse("1.222"));
+
+        double[] res = new double[]{1.1, 3.2, 3.8};
+        Doubles.reverse(res);
+        log.info("reverse- >{}", res);
+    }
+
+    @Test
+    void enumsTest() {
+        log.info("enums field ->{}", Enums.getField(Gender.MAN));
+        Converter converter = Enums.stringConverter(Gender.class);
+        log.info("convert ->{}", converter.convert("MAN") instanceof Gender);
+    }
+
+    @Test
+    void moreObjectsTest() {
+        log.info("toString -> {}", MoreObjects.toStringHelper(Person.class).add("givenName", "z").add("age", "aa").toString());
+    }
+
+    @Test
+    void collections2Test() {
+
+        log.info("transform ->{}", Collections2.transform(personList, new Function<Person, String>() {
+            @Nullable
+            @Override
+            public String apply(@Nullable Person person) {
+                return person.getSurName();
+            }
+        }));
+
+
+        log.info("filter -> {}", Collections2.filter(personList, new Predicate<Person>() {
+            @Override
+            public boolean apply(@Nullable Person person) {
+                return person.getGender() == Gender.WOMAN;
+            }
+        }));
+
+        log.info("orderedPermutations -> {}", Collections2.orderedPermutations(personList, new Ordering<Person>() {
+            @Override
+            public int compare(@Nullable Person person, @Nullable Person t1) {
+                return Ints.compare(person.getAge(), t1.getAge());
+            }
+        }));
+
+    }
+
+    @Test
+    void biMapTest() {
+        HashBiMap<String, String> biMap = HashBiMap.create();
+        biMap.put("name", "zad");
+        biMap.put("age", "17");
+
+        log.info("bimap is -> {}", biMap);
+        log.info("bimap is -> {}", biMap.inverse());
+    }
+
+    @Test
+    void t1() {
+        log.info("res is ->{}", 12 & 5);
+        log.info("res is ->{}", 1 & 5);
+        log.info("res is ->{}", 2 & 5);
+        log.info("res is ->{}", 3 & 5);
+        log.info("res is ->{}", 4 & 5);
+        log.info("res is ->{}", 5 & 5);
+        log.info("res is ->{}", 6 & 5);
+        log.info("res is ->{}", 7 & 5);
+        log.info("res is ->{}", 8 & 5);
+    }
+
 }

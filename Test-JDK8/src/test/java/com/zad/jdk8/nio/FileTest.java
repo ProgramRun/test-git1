@@ -1,11 +1,21 @@
 package com.zad.jdk8.nio;
 
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.io.*;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.net.URLConnection;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * 描述:
@@ -15,57 +25,97 @@ import java.util.Map;
  */
 class FileTest {
 
-    private static void fileData(File f) {
-        System.out.println(
-                " 绝对路径：" + f.getAbsolutePath() +
-                        "\n 可读：" + f.canRead() +
-                        "\n 可写：" + f.canWrite() +
-                        "\n 文件名：" + f.getName() +
-                        "\n 上级目录：" + f.getParent() +
-                        "\n 相对地址：" + f.getPath() +
-                        "\n 长度：" + f.length() +
-                        "\n 最近修改时间：" + f.lastModified()
-        );
-        if (f.isFile())
-            System.out.println(" 是一个文件");
-        else if (f.isDirectory())
-            System.out.println(" 是一个目录");
+    private String readFromInputStream(InputStream inputStream) throws IOException {
+        StringBuilder resultStringBuilder = new StringBuilder();
+        try (BufferedReader br
+                     = new BufferedReader(new InputStreamReader(inputStream))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                resultStringBuilder.append(line).append("\n");
+            }
+        }
+        return resultStringBuilder.toString();
+    }
+
+
+    @Test
+    void givenFileNameAsAbsolutePath_whenUsingClasspath_thenFileData() throws IOException {
+        String expectedData = "Hello World from fileTest.txt!!!";
+
+        Class clazz = FileTest.class;
+        InputStream inputStream = clazz.getResourceAsStream("/fileTest.txt");
+        String data = readFromInputStream(inputStream);
+
+        assertTrue(data.contains(expectedData));
     }
 
     @Test
-    void test1() {
-        // 获取当前目录
-        File path = new File(".");// .表示当前目录
-        // 文件路径名数组
-        String list[] = path.list();
+    void givenFilePath_whenUsingFilesReadAllBytes_thenFileData() throws IOException, URISyntaxException {
+        String expectedData = "Hello World from fileTest.txt!!!";
 
-        // 对String文件名进行排序
-        Arrays.sort(list, String.CASE_INSENSITIVE_ORDER);
+        Path path = Paths.get(getClass().getClassLoader()
+                .getResource("fileTest.txt").toURI());
+        byte[] fileBytes = Files.readAllBytes(path);
+        String data = new String(fileBytes);
 
-        // 打印
-        for (String dirItem : list)
-            System.out.println(dirItem);
+        assertEquals(expectedData, data.trim());
     }
 
     @Test
-    void t2() {
-        Map<Integer, Map<String, Integer>> map = new HashMap<>();
+    void givenFilePath_whenUsingFilesLines_thenFileData() throws IOException, URISyntaxException {
+        String expectedData = "Hello World from fileTest.txt!!!";
 
-        Map<String, Integer> m1 = new HashMap<>();
-        m1.put("age1", 1);
-        map.put(1, m1);
-        System.out.println(map.get(1));
+        Path path = Paths.get(getClass().getClassLoader()
+                .getResource("fileTest.txt").toURI());
 
-        Map<String, Integer> m2 = m1;
-        m2.put("age2", 2);
-        System.out.println(map.get(1));
+        Stream<String> lines = Files.lines(path);
+        String data = lines.collect(Collectors.joining("\n"));
+        lines.close();
+
+        assertEquals(expectedData, data.trim());
     }
 
     @Test
-    void t3() {
-        long oneDaySeconds = 3600 * 24L;
-        long other = (3600 << 4) + (3600 << 3);
-        System.out.println(oneDaySeconds);
-        System.out.println(other);
+    void givenFileName_whenUsingFileUtils_thenFileData() throws IOException {
+        String expectedData = "Hello World from fileTest.txt!!!";
+
+        ClassLoader classLoader = getClass().getClassLoader();
+        File file = new File(classLoader.getResource("fileTest.txt").getFile());
+        String data = FileUtils.readFileToString(file, "UTF-8");
+
+        assertEquals(expectedData, data.trim());
+    }
+
+    @Test
+    void givenFileName_whenUsingIOUtils_thenFileData() throws IOException {
+        String expectedData = "This is a content of the file";
+
+        FileInputStream fis = new FileInputStream("src/test/resources/fileToRead.txt");
+        String data = IOUtils.toString(fis, "UTF-8");
+
+        assertEquals(expectedData, data.trim());
+    }
+
+    @Test
+    void givenURLName_whenUsingURL_thenFileData() throws IOException {
+        String expectedData = "baidu";
+
+        URL urlObject = new URL("https://www.baidu.com");
+        URLConnection urlConnection = urlObject.openConnection();
+        InputStream inputStream = urlConnection.getInputStream();
+        String data = readFromInputStream(inputStream);
+
+        assertTrue(data.contains(expectedData));
+    }
+
+    @Test
+    public void givenFileName_whenUsingJarFile_thenFileData() {
+       /* String expectedData = "BSD License";
+
+        Class clazz = Matchers.class;
+        InputStream inputStream = clazz.getResourceAsStream("/LICENSE.txt");
+        String data = readFromInputStream(inputStream);
+
+        assertTrue(data.contains(expectedData));*/
     }
 }

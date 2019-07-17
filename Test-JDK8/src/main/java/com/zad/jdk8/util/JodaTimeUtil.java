@@ -1,5 +1,19 @@
 package com.zad.jdk8.util;
 
+import lombok.NonNull;
+import org.apache.commons.lang3.time.DateUtils;
+import org.joda.time.DateTime;
+import org.joda.time.Interval;
+import org.joda.time.Period;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+
+import javax.annotation.Nullable;
+import java.text.ParseException;
+import java.util.Date;
+import java.util.Locale;
+import java.util.concurrent.TimeUnit;
+
 /**
  * 描述:
  *
@@ -7,18 +21,9 @@ package com.zad.jdk8.util;
  * @create 2018-10-30 15:15
  */
 
-
-import lombok.NonNull;
-import org.joda.time.DateTime;
-import org.joda.time.Interval;
-import org.joda.time.Period;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
-
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
-
 public final class JodaTimeUtil {
+
+
 
     private JodaTimeUtil() {
         throw new AssertionError("Util禁止反射实例化");
@@ -44,9 +49,14 @@ public final class JodaTimeUtil {
      * @param pattern
      * @return
      */
-    public static Date strToDate(@NonNull String dateTime, @NonNull String pattern) {
-        DateTime res = getDateTime(dateTime, pattern);
+    public static Date strToDate(@NonNull String dateTime, @NonNull String pattern, @Nullable Locale locale) {
+        DateTime res = getDateTime(dateTime, pattern, locale);
         return res.toDate();
+    }
+
+    public static void main(String[] args) throws ParseException {
+        System.out.println(DateUtils.parseDate("Sep 09, 1990 12:22:22 PM", Locale.US,"MMM d, yyyy hh:mm:ss a"));
+        System.out.println(strToDate("Sep 09, 1990 12:22:22 PM", "MMM d, yyyy hh:mm:ss a",Locale.US));
     }
 
     /**
@@ -57,12 +67,12 @@ public final class JodaTimeUtil {
      * @return
      */
     public static Date strToDate(@NonNull String dateTime) {
-        DateTime res = getDateTime(dateTime, DEFAULT_DATE_TIME);
+        DateTime res = getDateTime(dateTime, DEFAULT_DATE_TIME, null);
         return res.toDate();
     }
 
-    private static DateTime getDateTime(@NonNull String dateTime, @NonNull String pattern) {
-        DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern(pattern);
+    private static DateTime getDateTime(@NonNull String dateTime, @NonNull String pattern, @Nullable Locale locale) {
+        DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern(pattern).withLocale(locale);
         return dateTimeFormatter.parseDateTime(dateTime);
     }
 
@@ -177,6 +187,7 @@ public final class JodaTimeUtil {
 
     /**
      * 指定日(一年中的第几天)
+     *
      * @param date
      * @param dayOfYear
      * @return
