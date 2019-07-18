@@ -22,22 +22,21 @@ import java.util.Date;
 @AllArgsConstructor
 public class Person {
 
-    private static final int INIT = 0;
-    private String givenName;
+	private static final int INIT = 0;
+	private String givenName;
 
-    private String surName;
+	private String surName;
 
-    volatile int age = INIT;
+	volatile int age = INIT;
 
-    private Gender gender;
+	private Gender gender;
 
-    private String eMail;
+	private String eMail;
 
-    private String phone;
+	private String phone;
 
-    private String address;
+	private String address;
 
-    private Date birthday;
-
+	private Date birthday;
 
 }

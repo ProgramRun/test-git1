@@ -1,7 +1,9 @@
 package com.zad.jedis;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 描述:
@@ -11,6 +13,8 @@ import lombok.Data;
  * @create 2018-09-14 15:26
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 public class Person {
     private String name;

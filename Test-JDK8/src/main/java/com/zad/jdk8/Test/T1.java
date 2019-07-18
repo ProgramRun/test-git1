@@ -1,5 +1,8 @@
 package com.zad.jdk8.Test;
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.math.NumberUtils;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -13,8 +16,21 @@ import java.util.Scanner;
  */
 public class T1 {
     public static void main(String[] args) throws IOException {
-        scannerTest();
-        readerTest();
+        /*scannerTest();
+        readerTest();*/
+        System.out.println(NumberUtils.isDigits("1.23"));
+        System.out.println(NumberUtils.isDigits("+1.23"));
+        System.out.println(NumberUtils.isDigits("-1.23"));
+
+
+        System.out.println(NumberUtils.isCreatable("1.23"));
+        System.out.println(NumberUtils.isCreatable("+1.23"));
+        System.out.println(NumberUtils.isCreatable("-1.23"));
+
+
+        System.out.println(StringUtils.isNumeric("1.23"));
+        System.out.println(StringUtils.isNumeric("+1.23"));
+        System.out.println(StringUtils.isNumeric("-1.23"));
     }
 
     static void scannerTest() {
@@ -37,4 +53,5 @@ public class T1 {
         System.out.printf("You have entered:- " + a +
                 " and name as " + b);
     }
+
 }

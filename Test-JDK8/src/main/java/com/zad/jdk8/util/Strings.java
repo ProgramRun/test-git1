@@ -1,7 +1,5 @@
 package com.zad.jdk8.util;
 
-import java.util.concurrent.TimeUnit;
-
 /**
  * 描述:
  * String补充
@@ -11,9 +9,13 @@ import java.util.concurrent.TimeUnit;
  */
 public class Strings {
     public static void main(String[] args) {
-        System.out.println(TimeUnit.DAYS.toSeconds(1));
-        System.out.println(TimeUnit.HOURS.toSeconds(1));
-        System.out.println(TimeUnit.MINUTES.toSeconds(1));
+        Boolean b = true;
+        changeB(b);
+        System.out.println();
+    }
+
+    private static void changeB(Boolean b){
+        b = false;
     }
 
     static int getIndex(String source, String pattern) {

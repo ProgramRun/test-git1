@@ -9,10 +9,7 @@ import com.zad.jdk8.common.Person;
 import org.apache.commons.collections.CollectionUtils;
 
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 描述:
@@ -52,7 +49,7 @@ final public class MapUtils {
 
     public static <F, T> Map<T, F> convertNormal(List<F> list, Function<F, T> function) {
         if (CollectionUtils.isEmpty(list)) {
-            return null;
+            return Collections.EMPTY_MAP;
         }
 
         Map map = new HashMap<>();
@@ -174,7 +171,12 @@ final public class MapUtils {
             }
         });
 
-        System.out.println(m1);
+        System.out.println((int)'A');
+        System.out.println((int)'Z');
 
+
+        String s = "A";
+
+        System.out.println('A'<=s.charAt(0) && s.charAt(0)<='Z');
     }
 }

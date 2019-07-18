@@ -80,6 +80,7 @@ class FileTest {
         String expectedData = "Hello World from fileTest.txt!!!";
 
         ClassLoader classLoader = getClass().getClassLoader();
+
         File file = new File(classLoader.getResource("fileTest.txt").getFile());
         String data = FileUtils.readFileToString(file, "UTF-8");
 

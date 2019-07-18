@@ -7,9 +7,6 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
@@ -61,12 +58,10 @@ public class DateTimeUtilTest {
 
     @Test
     void t3() {
-        Map<String, Integer> map = new HashMap<>();
-        map.merge("a", 1, Integer::sum);
-        System.out.println(map.get("a"));
+       String s = "中国abc11111";
 
-        Map<String,String> m2= new LinkedHashMap<>();
-
-        m2.put("a","aa");
+       for(int i=0;i<s.length();i++){
+           System.out.println('0'< s.charAt(i) && '9'> s.charAt(i));
+       }
     }
 }
