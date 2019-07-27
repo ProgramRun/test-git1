@@ -29,7 +29,6 @@
         <contiperf.version>2.3.4</contiperf.version>
         <commons-lang3.version>3.7</commons-lang3.version>
         <lombok.version>1.18.2</lombok.version>
-        <slf4j-api.version>1.7.25</slf4j-api.version>
         <logback.version>1.2.3</logback.version>
         <junit-jupiter-api.version>5.2.0</junit-jupiter-api.version>
         <activemq.version>5.15.2</activemq.version>
@@ -91,12 +90,6 @@
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
-                <version>${logback.version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-core</artifactId>
                 <version>${logback.version}</version>
             </dependency>
 
