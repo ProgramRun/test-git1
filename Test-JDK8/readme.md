@@ -271,12 +271,42 @@ Parallel Scavenge收集器的老年代版本，并行收集器，吞吐量优先
 1. https://www.cnblogs.com/rever/p/8215743.html
 
 
-
-
-
 # NIO
 
 参考资料:
 
 1. https://www.ibm.com/developerworks/cn/education/java/j-nio/j-nio.html
 2. http://tutorials.jenkov.com/java-nio/index.html
+
+# Guava 简介
+## Basic Utilities: Make using the Java language more pleasant.
++ 使用Optional避免null
++ 使用Preconditions进行预检查
++ JDK1.7及以后直接使用 Objects.equals() 和 Objects.compare()方法,避免空指针
++ Ordering增强版Comparator
++ Throwables: 用于传递和检查exceptions和errors
+
+## Collections: Guava's extensions to the JDK collections ecosystem. These are some of the most mature and popular parts of Guava.
+1. Immutable collections: 用于防御性编程,常量集合,提高开发效率
+2. New Collection Types:
+    1. Multiset 工具类,可以用于count每个对象出现的次数
+    2. SortedMultiset
+    3. Multimap: 同一个key可以对应list的扩展map,例子 a -> [1,2,4]
+    4. Bimap: key 和value 互换的map
+## Graphs: a library for modeling graph-structured data, that is, entities and the relationships between them.
+## Caches: Local caching, done right, and supporting a wide variety of expiration behaviors.
+## Functional Utilities: 
+## Concurrency: Powerful, simple abstractions to make it easier to write correct concurrent code.
+## Strings: A few extremely useful string utilities: splitting, joining, padding, and more.
+## Primitives: Used sparingly, Guava's functional idioms can significantly simplify code.
+## Ranges: Guava's powerful API for dealing with ranges on Comparable types, both continuous and discrete.
+## I/O: Simplified I/O operations, especially on whole I/O streams and files, for Java 5 and 6.
+## Hashing: Tools for more sophisticated hashes than what's provided by Object.hashCode(), including Bloom filters.
+## EventBus: Publish-subscribe-style communication between components without requiring the components to explicitly register with one another.
+## Math: Optimized, thoroughly tested math utilities not provided by the JDK.
+## Reflection: Guava utilities for Java's reflective capabilities.
+
+
+参考资料:
+
+1. https://github.com/google/guava/wiki
