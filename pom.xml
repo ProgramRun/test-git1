@@ -42,6 +42,8 @@
         <pinyin4j.version>2.5.1</pinyin4j.version>
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
         <commons-collections.version>3.2.1</commons-collections.version>
+        <commons-io.version>2.6</commons-io.version>
+        <commons-validator.version>1.5.1</commons-validator.version>
     </properties>
     <build>
         <plugins>
@@ -53,6 +55,25 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                </configuration>
+            </plugin>
+            <!-- 设置版本号  -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>versions-maven-plugin</artifactId>
+                <version>2.3</version>
+            </plugin>
+
+            <!--  findbugs -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>3.0.5</version>
+                <configuration>
+                    <threshold>High</threshold>
+                    <effort>Default</effort>
+                    <findbugsXmlOutput>true</findbugsXmlOutput>
+                    <findbugsXmlOutputDirectory>target/site</findbugsXmlOutputDirectory>
                 </configuration>
             </plugin>
         </plugins>
@@ -197,16 +218,27 @@
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>3.9</version>
+                <version>${commons-lang3.version}</version>
             </dependency>
 
             <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
-                <version>2.6</version>
+                <version>${commons-io.version}</version>
             </dependency>
+
+
+            <!-- https://mvnrepository.com/artifact/commons-validator/commons-validator -->
+            <dependency>
+                <groupId>commons-validator</groupId>
+                <artifactId>commons-validator</artifactId>
+                <version>${commons-validator.version}</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>
+
+
 </project>

@@ -293,12 +293,37 @@ Parallel Scavenge收集器的老年代版本，并行收集器，吞吐量优先
     2. SortedMultiset
     3. Multimap: 同一个key可以对应list的扩展map,例子 a -> [1,2,4]
     4. Bimap: key 和value 互换的map
+    5. Table:保存了3个值,Table<R,C,V> 可以用于坐标系
+    6. ClassToInstanceMap
+3. Collection工具类扩展
+    1. Guava提供了静态构造函数,简介明了
+    2. Iterables:提供了众多实用的方法
+        1. concat(Iterable<Iterable>) -> concat(Iterable...) 拼接多个Iterable
+        2. frequency(Iterable, Object) -> 统计Object在Iterable中出现的次数
+        3. partition(Iterable,int) 将Iterable按照int切割为多个List
+        4. getFirst(Iterable,T default) 返回Iterable中第一个元素,否则返回default
+        5. getLast(Iterable,T default)
+        6. elementsEqual(Iterable,Iterable):返回true如果2个Iterable含有相同次序的元素
+        7. unmodifiableIterable(Iterable):返回不可变iterable
+        8. limit(Iterable,int):返回指定个数Iterable
+        9. 
+4. 
 ## Graphs: a library for modeling graph-structured data, that is, entities and the relationships between them.
 ## Caches: Local caching, done right, and supporting a wide variety of expiration behaviors.
 ## Functional Utilities: 
 ## Concurrency: Powerful, simple abstractions to make it easier to write correct concurrent code.
 ## Strings: A few extremely useful string utilities: splitting, joining, padding, and more.
+
+1. Joiner: 拼接工具类
+2. Splitter: 剪切工具类
+3. CharMatcher: 字符匹配工具
+4. Charsets:
+5. CaseFormat: string不同命名空间之间的转换(如驼峰->下划线)
+
 ## Primitives: Used sparingly, Guava's functional idioms can significantly simplify code.
+
+1. 
+
 ## Ranges: Guava's powerful API for dealing with ranges on Comparable types, both continuous and discrete.
 ## I/O: Simplified I/O operations, especially on whole I/O streams and files, for Java 5 and 6.
 ## Hashing: Tools for more sophisticated hashes than what's provided by Object.hashCode(), including Bloom filters.
