@@ -14,7 +14,7 @@ import java.util.Locale;
  */
 public final class StringUtil {
 
-	public StringUtil() {
+	private StringUtil() {
 		throw new AssertionError("Util禁止反射实例化");
 	}
 
