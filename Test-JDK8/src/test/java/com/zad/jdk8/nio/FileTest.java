@@ -110,7 +110,7 @@ class FileTest {
     }
 
     @Test
-    public void givenFileName_whenUsingJarFile_thenFileData() {
+    void givenFileName_whenUsingJarFile_thenFileData() {
        /* String expectedData = "BSD License";
 
         Class clazz = Matchers.class;

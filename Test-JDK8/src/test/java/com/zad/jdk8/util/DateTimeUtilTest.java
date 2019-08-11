@@ -2,13 +2,15 @@ package com.zad.jdk8.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.time.DateUtils;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.math.BigDecimal;
+import java.text.ParseException;
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.PriorityQueue;
-import java.util.Scanner;
+import java.util.*;
 
 @Slf4j
 public class DateTimeUtilTest {
@@ -21,6 +23,9 @@ public class DateTimeUtilTest {
 
     @Test
     void t1() {
+        log.info("everything is fine -> {}", "nnnnn");
+        log.error("everything is fine -> {}", "nnnnn");
+
         PriorityQueue<LocalDate> pq = new PriorityQueue<>();
 
         pq.add(LocalDate.of(1990, 2, 5));
@@ -58,10 +63,35 @@ public class DateTimeUtilTest {
 
     @Test
     void t3() {
-       String s = "中国abc11111";
+        String s = "中国abc11111";
 
-       for(int i=0;i<s.length();i++){
-           System.out.println('0'< s.charAt(i) && '9'> s.charAt(i));
-       }
+       /* for (int i = 0; i < s.length(); i++) {
+            System.out.println('0' < s.charAt(i) && '9' > s.charAt(i));
+        }*/
+
+        int b = 0b111;
+        int d = 111;
+        int e = 0111;
+        int x = 0x111;
+        System.out.println(b);
+        System.out.println(d);
+        System.out.println(e);
+        System.out.println(x);
+    }
+
+    @Test
+    void t4() throws ParseException {
+        Date d1 = DateUtils.parseDate("1990-02-07 12:00:00","yyyy-MM-dd HH:mm:ss");
+        Date d2 = DateUtils.parseDate("1990-02-07 12:00:00","yyyy-MM-dd HH:mm:ss");
+        Assertions.assertEquals(d1,d2);
+        BigDecimal b1 = null;
+        BigDecimal b2 = new BigDecimal(1);
+
+        System.out.println(Objects.compare(b1, b2, new Comparator<BigDecimal>() {
+            @Override
+            public int compare(BigDecimal o1, BigDecimal o2) {
+                return 0;
+            }
+        }));
     }
 }

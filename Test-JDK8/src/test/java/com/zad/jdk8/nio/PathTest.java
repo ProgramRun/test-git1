@@ -1,15 +1,14 @@
 package com.zad.jdk8.nio;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.time.StopWatch;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author zad
@@ -26,20 +25,26 @@ public class PathTest {
 		log.info("the path is -> {}", path);
 		log.info("the file is -> {}", path.toFile());
 		log.info("the absolutePath is -> {}", path.toFile().getAbsolutePath());
-		log.info("the path is -> {}", path.toFile().exists());
+		log.info("the path exists -> {}", path.toFile().exists());
 
 		Path path1 = Paths.get(getClass().getResource("/fileTest.txt").toURI());
 		log.info("the path is -> {}", path1);
 		log.info("the file is -> {}", path1.toFile());
 		log.info("the absolutePath is -> {}", path1.toFile().getAbsolutePath());
-		log.info("the path is -> {}", path1.toFile().exists());
+		log.info("the path exists -> {}", path1.toFile().exists());
 
 
-		Path path2 = Paths.get("E:/Self/Test-Java/Test-JDK8/target/test-classes", "/fileTest.txt");
+		Path path2 = Paths.get("E:/Code/Test-Java/Test-JDK8/target/test-classes", "/fileTest.txt");
 		log.info("the path is -> {}", path2);
 		log.info("the file is -> {}", path2.toFile());
 		log.info("the absolutePath is -> {}", path2.toFile().getAbsolutePath());
-		log.info("the path is -> {}", path2.toFile().exists());
+		log.info("the path exists -> {}", path2.toFile().exists());
+
+		Path path3 = Paths.get("fileTest.txt");
+		log.info("the path is -> {}", path3);
+		log.info("the file is -> {}", path3.toFile());
+		log.info("the absolutePath is -> {}", path3.toFile().getAbsolutePath());
+		log.info("the path exists -> {}", path3.toFile().exists());
 	}
 
 
@@ -51,22 +56,18 @@ public class PathTest {
 	}
 
 	@Test
-	void s1() throws InterruptedException {
-		StopWatch sw = StopWatch.createStarted();
-		System.out.println(sw.getStartTime());
-		TimeUnit.SECONDS.sleep(1L);
-		System.out.println(sw.getTime());
+	void s1() {
+		Path path = FileSystems.getDefault().getPath("E:/Code/Test-Java/Test-JDK8/target/test-classes", "/fileTest.txt");
+		log.info("the path is -> {}", path);
+		log.info("the file is -> {}", path.toFile());
+		log.info("the absolutePath is -> {}", path.toFile().getAbsolutePath());
+		log.info("the path exists -> {}", path.toFile().exists());
 
-		sw.stop();
-
-		TimeUnit.SECONDS.sleep(1L);
-		System.out.println(sw.getTime());
-
-		//sw.stop();
-
-		TimeUnit.SECONDS.sleep(1L);
-		System.out.println(sw.getTime());
-
+		Path path1 = FileSystems.getDefault().getPath("target/test-classes/fileTest.txt");
+		log.info("the path is -> {}", path1);
+		log.info("the file is -> {}", path1.toFile());
+		log.info("the absolutePath is -> {}", path1.toFile().getAbsolutePath());
+		log.info("the path exists -> {}", path1.toFile().exists());
 
 	}
 }

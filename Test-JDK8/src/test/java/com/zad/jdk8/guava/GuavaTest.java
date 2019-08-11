@@ -78,12 +78,17 @@ class GuavaTest {
 
     @Test
     void multiSetTest() {
-        HashMultiset req = HashMultiset.create();
+        HashMultiset<String> req = HashMultiset.create();
         req.addAll(strings);
 
         log.info("count -> {}", req.count("a1"));
 
         log.info("set -> {}", req.elementSet());
+
+        TreeMultiset<String> tm = TreeMultiset.create(strings);
+        log.info("count -> {}", tm.count("a1"));
+
+        log.info("set -> {}", tm.elementSet());
     }
 
 
@@ -238,15 +243,15 @@ class GuavaTest {
 
     @Test
     void t1() {
-        log.info("res is ->{}", 12 & 5);
-        log.info("res is ->{}", 1 & 5);
-        log.info("res is ->{}", 2 & 5);
-        log.info("res is ->{}", 3 & 5);
-        log.info("res is ->{}", 4 & 5);
-        log.info("res is ->{}", 5 & 5);
-        log.info("res is ->{}", 6 & 5);
-        log.info("res is ->{}", 7 & 5);
-        log.info("res is ->{}", 8 & 5);
+        Table<Double, Double, Double> weightedGraph = HashBasedTable.create();
+        Double d1 = 1.2;
+        weightedGraph.put(d1, 2.1, 4.0);
+        weightedGraph.put(d1, 2.1, 4.1);
+        weightedGraph.put(d1, 2.2, 20.0);
+        weightedGraph.put(d1, 2.3, 5.0);
+
+        log.info("row map is -> {}", weightedGraph.row(d1));
+        log.info("column map is -> {}", weightedGraph.column(2.1));
     }
 
 }
