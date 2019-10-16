@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 @Data
 @NoArgsConstructor
 @RequiredArgsConstructor(staticName = "of")
-public class Pair<T extends Comparable<T>> {
+public class Pair<T> {
     @NonNull
     private T first;
     @NonNull

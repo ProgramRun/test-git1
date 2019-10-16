@@ -1,9 +1,13 @@
 package com.zad.jdk8.util;
 
+import com.google.common.math.BigIntegerMath;
+import com.google.common.math.DoubleMath;
+import com.google.common.math.IntMath;
+import com.google.common.math.LongMath;
 import lombok.Data;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.math.BigInteger;
+import java.math.RoundingMode;
 
 /**
  * 描述:
@@ -22,13 +26,22 @@ public class Dates {
 
 
     public static void main(String[] args) {
-        List<Ex> exList = new ArrayList<>();
+        int logFloor = LongMath.log2(12, RoundingMode.FLOOR);
+
+        int mustNotOverflow = IntMath.checkedMultiply(2, 5);
+
+        long quotient = LongMath.divide(20, 3, RoundingMode.UNNECESSARY); // fail fast on non-multiple of 3
+
+        BigInteger nearestInteger = DoubleMath.roundToBigInteger(12, RoundingMode.HALF_EVEN);
+
+        BigInteger sideLength = BigIntegerMath.sqrt(BigInteger.valueOf(11221), RoundingMode.CEILING);
     }
 
-    static void recordIndex(){}
+    static void recordIndex() {
+    }
 
     @Data
-    class Ex{
+    class Ex {
         private String start;
         private String end;
         private Integer num;

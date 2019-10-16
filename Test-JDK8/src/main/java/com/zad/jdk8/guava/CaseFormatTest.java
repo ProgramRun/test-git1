@@ -14,6 +14,7 @@ public class CaseFormatTest {
         String s2 = CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_UNDERSCORE,"antMatchers");
         String s3 = CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_UNDERSCORE,"antMatchers");
         String s4 = CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_UNDERSCORE,"antMatchers");
+
         System.out.println(s1);
     }
 }

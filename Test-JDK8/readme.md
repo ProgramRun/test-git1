@@ -322,9 +322,111 @@ Parallel Scavenge收集器的老年代版本，并行收集器，吞吐量优先
 
 ## Primitives: Used sparingly, Guava's functional idioms can significantly simplify code.
 
-1. 
+1. 基本数组的工具类(以Ints为例)
+
+   1. ```java
+      Ints.asList(1, 2, 3);
+      ```
+
+   2. ```java
+      Ints.toArray(l1);
+      ```
+
+   3. ```java
+      Ints.concat(new int[]{1, 2, 3,}, new int[]{1, 2, 3,});
+      ```
+
+   4. ```java
+       Ints.contains(new int[]{1, 2, 3,}, 3);
+      ```
+
+   5. ```java
+      Ints.indexOf(new int[]{1, 2, 3,}, 3);
+      ```
+
+   6. ```java
+      Ints.lastIndexOf(new int[]{1, 2, 3,}, 3);
+      ```
+
+   7. ```java
+      Ints.min(1, 2, 4);
+      ```
+
+   8. ```java
+      Ints.max(1, 2, 4);
+      ```
+
+   9. ```java
+      Ints.join(",", 1, 2, 4)
+      ```
+
+2. 通用工具类
+
+   1. ```java
+      Ints.compare(1, 2);
+      ```
+
+   2. ```java
+      Ints.checkedCast(1); //校验数字范围是否属于int 
+      ```
+
+   3. ```java
+      Ints.saturatedCast(11); // 输入超过Integer最大值,则返回Integer.MAX_VALUE;
+      ```
+
+3. Byte转换方法
+
+   1. ```java
+      Ints.fromByteArray(new byte[]{1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0});
+      ```
+
+   2. ```java
+      Ints.toByteArray(5);
+      ```
+
+   3. ```java
+      Ints.fromBytes((byte) 0, (byte) 1, (byte) 1, (byte) 1);
+      ```
+
+   
 
 ## Ranges: Guava's powerful API for dealing with ranges on Comparable types, both continuous and discrete.
+
+1. ```java
+   Range.open(1, 2);
+   Range.closed(1, 2);
+   Range.downTo(10, BoundType.CLOSED);
+   Range.range(1, BoundType.CLOSED, 4, BoundType.OPEN);
+   ```
+
+2. ```java
+   Range.closedOpen(4, 4).isEmpty(); // returns true
+   Range.openClosed(4, 4).isEmpty(); // returns true
+   Range.closed(4, 4).isEmpty(); // returns false
+   Range.open(4, 4).isEmpty(); // Range.open throws IllegalArgumentException
+   
+   Range.closed(3, 10).lowerEndpoint(); // returns 3
+   Range.open(3, 10).lowerEndpoint(); // returns 3
+   Range.closed(3, 10).lowerBoundType(); // returns CLOSED
+   Range.open(3, 10).upperBoundType(); // returns OPEN
+   ```
+
+3. ```java
+   Range.closed(3, 5).isConnected(Range.open(5, 10)); // returns true
+   Range.closed(0, 9).isConnected(Range.closed(3, 4)); // returns true
+   Range.closed(0, 5).isConnected(Range.closed(3, 9)); // returns true
+   Range.open(3, 5).isConnected(Range.open(5, 10)); // returns false
+   Range.closed(1, 5).isConnected(Range.closed(6, 10)); // returns false
+   ```
+
+4. ```java
+   Range.closed(3, 5).intersection(Range.open(5, 10)); // returns (5, 5]
+   Range.closed(0, 9).intersection(Range.closed(3, 4)); // returns [3, 4]
+   Range.closed(0, 5).intersection(Range.closed(3, 9)); // returns [3, 5]
+   Range.open(3, 5).intersection(Range.open(5, 10)); // throws IAE
+   Range.closed(1, 5).intersection(Range.closed(6, 10)); // throws IAE
+   ```
+
 ## I/O: Simplified I/O operations, especially on whole I/O streams and files, for Java 5 and 6.
 ## Hashing: Tools for more sophisticated hashes than what's provided by Object.hashCode(), including Bloom filters.
 ## EventBus: Publish-subscribe-style communication between components without requiring the components to explicitly register with one another.
