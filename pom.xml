@@ -20,6 +20,7 @@
         <module>Test-Kafka</module>
         <module>Test-Tomcat</module>
         <module>Test-sql</module>
+        <module>Test-Algorithms</module>
     </modules>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

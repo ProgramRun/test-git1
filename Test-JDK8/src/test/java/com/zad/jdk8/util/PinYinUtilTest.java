@@ -1,7 +1,9 @@
 package com.zad.jdk8.util;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
+@Slf4j
 class PinYinUtilTest {
 
     @Test
@@ -19,6 +21,16 @@ class PinYinUtilTest {
 
     @Test
     void t3() {
+        log.info("res is => " + tableSizeFor(10));
+    }
 
+    static final int tableSizeFor(int cap) {
+        int n = cap - 1;
+        n |= n >>> 1;
+        n |= n >>> 2;
+        n |= n >>> 4;
+        n |= n >>> 8;
+        n |= n >>> 16;
+        return n;
     }
 }

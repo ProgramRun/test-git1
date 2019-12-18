@@ -1,6 +1,7 @@
 package com.zad.jdk8.util;
 
 
+import java.util.StringTokenizer;
 
 /**
  * 描述:
@@ -9,12 +10,18 @@ package com.zad.jdk8.util;
  * @create 2019-07-16 19:06
  */
 public class FileUtil {
-    /*public FileUtil() {
-        throw new AssertionError("Util禁止反射实例化");
-    }*/
 
     public static void main(String[] args) {
-        System.out.println(FileUtil.class.getResource(""));
-        System.out.println(FileUtil.class.getResource("/"));
+        System.out.println(removeBreakingWhitespace("ass sdfa fdsf"));
+    }
+
+    static String removeBreakingWhitespace(String original) {
+        StringTokenizer whitespaceStripper = new StringTokenizer(original);
+        StringBuilder builder = new StringBuilder();
+        while (whitespaceStripper.hasMoreTokens()) {
+            builder.append(whitespaceStripper.nextToken());
+            builder.append(" ");
+        }
+        return builder.toString();
     }
 }
