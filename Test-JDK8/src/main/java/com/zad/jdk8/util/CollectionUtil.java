@@ -2,8 +2,12 @@ package com.zad.jdk8.util;
 
 
 import com.google.common.collect.Lists;
+import lombok.var;
 
 import java.util.*;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 /**
  * @author zad
@@ -39,11 +43,11 @@ public final class CollectionUtil {
                 res.add(entity);
             }
         }
-        return  res;
+        return res;
     }
 
     public static <T> Collection<T> removeNullElements(Collection<T> input) {
-        return filter(input, new Predict<T>() {
+        return filter(input, new Predicate<T>() {
             @Override
             public boolean test(T t) {
                 return t == null;
@@ -53,65 +57,46 @@ public final class CollectionUtil {
 
 
     public static Collection<String> removeBlankString(Collection<String> input) {
-        return filter(input, new Predict<String>() {
-            @Override
-            public boolean test(String s) {
-                return StringUtil.isBlank(s);
-            }
-        });
+        return input.stream().filter(StringUtil::isNotBlank).collect(Collectors.toList());
     }
 
 
-    public static <T> Collection<T> filter(Collection<T> input, Predict<T> predict) {
+    public static void main(String[] args) {
+        var l = List.of(":", "1", "", "a");
+        System.out.println(removeBlankString(l));
+    }
+
+    public static <T> Collection<T> filter(Collection<T> input, Predicate<T> predicate) {
         if (isEmpty(input)) {
             return input;
         }
 
-        Iterator<T> it = input.iterator();
-
-        while (it.hasNext()) {
-            T temp = it.next();
-            if (predict.test(temp)) {
-                it.remove();
-            }
-        }
+        input.removeIf(predicate);
         return input;
     }
 
 
-    public static <K, V> Map<K, V> filterKey(Map<K, V> input, Predict<K> keyPredict) {
+    public static <K, V> Map<K, V> filterKey(Map<K, V> input, Predicate<K> keyPredicate) {
         if (isEmpty(input)) {
             return input;
         }
 
-        Iterator<K> it = input.keySet().iterator();
-        while (it.hasNext()) {
-            K tempK = it.next();
-            if (keyPredict.test(tempK)) {
-                it.remove();
-            }
-        }
+        input.keySet().removeIf(keyPredicate);
         return input;
     }
 
-    public static <K, V> Map<K, V> filterValue(Map<K, V> input, Predict<V> valuePredict) {
+    public static <K, V> Map<K, V> filterValue(Map<K, V> input, Predicate<V> valuePredicate) {
         if (isEmpty(input)) {
             return input;
         }
-        Iterator<Map.Entry<K, V>> it = input.entrySet().iterator();
-        while (it.hasNext()) {
-            Map.Entry<K, V> entry = it.next();
-            if (valuePredict.test(entry.getValue())) {
-                it.remove();
-            }
-        }
+        input.entrySet().removeIf(entry -> valuePredicate.test(entry.getValue()));
         return input;
     }
 
 
     public static <T, U> Collection<U> convert(Collection<T> input, Function<T, U> function) {
         if (isEmpty(input)) {
-            return Collections.EMPTY_LIST;
+            return Collections.emptyList();
         }
 
         List<U> res = new ArrayList<>(input.size());
@@ -128,7 +113,7 @@ public final class CollectionUtil {
     public static <K, V, T> Map<K, V> convert2Map(Collection<T> input, Function<T, K> keyFunction,
                                                   Function<T, V> valueFunction) {
         if (isEmpty(input)) {
-            return Collections.EMPTY_MAP;
+            return Collections.emptyMap();
         }
 
         Map<K, V> res = new HashMap<>(input.size());
@@ -147,7 +132,7 @@ public final class CollectionUtil {
     public static <K, V, T> Map<K, List<V>> convert2MapList(Collection<T> input, Function<T, K> keyFunction,
                                                             Function<T, V> valueFunction) {
         if (isEmpty(input)) {
-            return Collections.EMPTY_MAP;
+            return Collections.emptyMap();
         }
 
         Map<K, List<V>> res = new HashMap<>(input.size());
