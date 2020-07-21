@@ -10,7 +10,6 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>Test-JDK8</module>
-        <module>Test-AXURE</module>
         <module>Test-ZK</module>
         <module>Test-Redis</module>
         <module>Test-Dubbo</module>
@@ -19,6 +18,7 @@
         <module>Test-Kafka</module>
         <module>Test-Tomcat</module>
         <module>Test-sql</module>
+        <module>Test-Log</module>
     </modules>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -258,6 +258,15 @@
                 <version>${mapstruct.version}</version>
                 <scope>provided</scope>
             </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
+            <dependency>
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <version>3.16.1</version>
+                <scope>test</scope>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>

@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.extern.java.Log;
 
 import java.util.Date;
 
@@ -16,18 +15,16 @@ import java.util.Date;
  * @create 2018-09-09 22:31
  */
 @Builder
-@Log
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Person {
 
-	private static final int INIT = 0;
 	private String givenName;
 
 	private String surName;
 
-	volatile int age = INIT;
+	private int age;
 
 	private Gender gender;
 

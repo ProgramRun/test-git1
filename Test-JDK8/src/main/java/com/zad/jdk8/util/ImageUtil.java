@@ -1,5 +1,6 @@
 package com.zad.jdk8.util;
 
+import com.google.common.hash.Hashing;
 import lombok.SneakyThrows;
 import net.coobird.thumbnailator.Thumbnails;
 import net.sf.image4j.codec.ico.ICODecoder;
@@ -10,6 +11,7 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Collections;
 
 /**
@@ -55,6 +57,8 @@ public class ImageUtil {
 
 
     public static void main(String[] args) {
-        convert2ICOAndScale("D:\\Software/jingxuan_jingxuanyitu_257142_11.jpg","D:\\Software/test.ico",16,10);
+        String res = Hashing.murmur3_32().hashString("http://www.baidu.com", StandardCharsets.UTF_8).toString();
+        System.out.println(res);
+        //convert2ICOAndScale("D:\\Software/jingxuan_jingxuanyitu_257142_11.jpg","D:\\Software/test.ico",16,10);
     }
 }
