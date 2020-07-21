@@ -37,7 +37,7 @@
         <jedis.version>2.9.0</jedis.version>
         <jjwt.version>0.9.1</jjwt.version>
         <joda-time.version>2.9.9</joda-time.version>
-        <jackson-databind.version>2.9.10.4</jackson-databind.version>
+        <jackson-databind.version>2.9.10.5</jackson-databind.version>
         <pinyin4j.version>2.5.1</pinyin4j.version>
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
         <commons-collections.version>3.2.1</commons-collections.version>
