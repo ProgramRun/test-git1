@@ -39,7 +39,7 @@
         <joda-time.version>2.9.9</joda-time.version>
         <jackson-databind.version>2.9.10.4</jackson-databind.version>
         <pinyin4j.version>2.5.1</pinyin4j.version>
-        <commons-beanutils.version>1.9.3</commons-beanutils.version>
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <commons-collections.version>3.2.1</commons-collections.version>
         <commons-io.version>2.6</commons-io.version>
         <commons-validator.version>1.5.1</commons-validator.version>
