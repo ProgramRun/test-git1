@@ -19,6 +19,8 @@
         <module>Test-Tomcat</module>
         <module>Test-sql</module>
         <module>Test-Log</module>
+        <module>Test-Log/slf4j-simple</module>
+        <module>Test-Log/logback</module>
     </modules>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
