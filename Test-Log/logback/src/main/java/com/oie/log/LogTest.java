@@ -25,7 +25,7 @@ public class LogTest {
         int newT = 15;
         int oldT = 16;
 
-        // using traditional API
+        /*// using traditional API
         log.debug("Temperature set to {}. Old temperature was {}.", newT, oldT);
 
         // using fluent API, add arguments one by one and then log message
@@ -39,7 +39,7 @@ public class LogTest {
 
         // using fluent API, add one argument with a Supplier and then log message with one more argument.
         // Assume the method t16() returns 16.
-        log.atDebug().addArgument(LogTest::t16).log( "Temperature set to {}. Old temperature was {}.", oldT);
+        log.atDebug().addArgument(LogTest::t16).log( "Temperature set to {}. Old temperature was {}.", oldT);*/
     }
 
 

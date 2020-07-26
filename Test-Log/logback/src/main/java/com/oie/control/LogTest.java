@@ -1,6 +1,9 @@
 package com.oie.control;
 
+import ch.qos.logback.classic.LoggerContext;
+import ch.qos.logback.core.util.StatusPrinter;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.LoggerFactory;
 
 /**
  * @Author waiter
@@ -17,7 +20,10 @@ public class LogTest {
         log.info("info log");
         log.warn("warn log");
         log.error("error log");
-        //fluentLog();
+        // assume SLF4J is bound to logback in the current environment
+        LoggerContext lc = (LoggerContext) LoggerFactory.getILoggerFactory();
+        // print logback's internal status
+        StatusPrinter.print(lc);
     }
 
 
@@ -26,7 +32,7 @@ public class LogTest {
         int oldT = 16;
 
         // using traditional API
-        log.debug("Temperature set to {}. Old temperature was {}.", newT, oldT);
+        /*log.debug("Temperature set to {}. Old temperature was {}.", newT, oldT);
 
         // using fluent API, add arguments one by one and then log message
         log.atDebug().addArgument(newT).addArgument(oldT).log("Temperature set to {}. Old temperature was {}.");
@@ -39,7 +45,7 @@ public class LogTest {
 
         // using fluent API, add one argument with a Supplier and then log message with one more argument.
         // Assume the method t16() returns 16.
-        log.atDebug().addArgument(LogTest::t16).log( "Temperature set to {}. Old temperature was {}.", oldT);
+        log.atDebug().addArgument(LogTest::t16).log( "Temperature set to {}. Old temperature was {}.", oldT);*/
     }
 
 
