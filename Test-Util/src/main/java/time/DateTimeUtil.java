@@ -1,8 +1,7 @@
-package com.zad.jdk8.util;
+package time;
 
 
 import lombok.NonNull;
-import org.apache.commons.lang3.StringUtils;
 
 import java.time.Duration;
 import java.time.Instant;
@@ -13,6 +12,7 @@ import java.time.Period;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.TimeUnit;
@@ -377,7 +377,7 @@ public final class DateTimeUtil {
     }
 
     private static DateTimeFormatter getFormatter(String pattern) {
-        if (StringUtils.isBlank(pattern)) {
+        if (Objects.isNull(pattern)) {
             throw new IllegalArgumentException("Invalid pattern specification");
         }
         DateTimeFormatter formatter = FORMATTER_CACHE.get(pattern);

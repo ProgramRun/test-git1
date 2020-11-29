@@ -1,15 +1,12 @@
-package com.zad.jdk8.util;
+package time;
 
 import lombok.NonNull;
-import org.apache.commons.lang3.time.DateUtils;
 import org.joda.time.DateTime;
 import org.joda.time.Interval;
 import org.joda.time.Period;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
-import javax.annotation.Nullable;
-import java.text.ParseException;
 import java.util.Date;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
@@ -22,7 +19,6 @@ import java.util.concurrent.TimeUnit;
  */
 
 public final class JodaTimeUtil {
-
 
 
     private JodaTimeUtil() {
@@ -49,15 +45,11 @@ public final class JodaTimeUtil {
      * @param pattern
      * @return
      */
-    public static Date strToDate(@NonNull String dateTime, @NonNull String pattern, @Nullable Locale locale) {
+    public static Date strToDate(@NonNull String dateTime, @NonNull String pattern, Locale locale) {
         DateTime res = getDateTime(dateTime, pattern, locale);
         return res.toDate();
     }
 
-    public static void main(String[] args) throws ParseException {
-        System.out.println(DateUtils.parseDate("Sep 09, 1990 12:22:22 PM", Locale.US,"MMM d, yyyy hh:mm:ss a"));
-        System.out.println(strToDate("Sep 09, 1990 12:22:22 PM", "MMM d, yyyy hh:mm:ss a",Locale.US));
-    }
 
     /**
      * 将 dateTimeStr 转为 Date
@@ -71,7 +63,7 @@ public final class JodaTimeUtil {
         return res.toDate();
     }
 
-    private static DateTime getDateTime(@NonNull String dateTime, @NonNull String pattern, @Nullable Locale locale) {
+    private static DateTime getDateTime(@NonNull String dateTime, @NonNull String pattern,  Locale locale) {
         DateTimeFormatter dateTimeFormatter = DateTimeFormat.forPattern(pattern).withLocale(locale);
         return dateTimeFormatter.parseDateTime(dateTime);
     }
@@ -89,16 +81,7 @@ public final class JodaTimeUtil {
         return res.toString(pattern);
     }
 
-    /**
-     * 将 Date 按照 标准格式 格式输出
-     *
-     * @param date
-     * @return
-     */
-    public static String dateToStr(@NonNull Date date) {
-        DateTime dateTime = new DateTime(date.getTime());
-        return dateTime.toString(DEFAULT_DATE_TIME);
-    }
+
 
 
     // ========================= format ============================== //

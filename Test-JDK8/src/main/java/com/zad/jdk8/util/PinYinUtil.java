@@ -1,10 +1,12 @@
 package com.zad.jdk8.util;
 
+import com.google.common.collect.Range;
 import net.sourceforge.pinyin4j.PinyinHelper;
 import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
 import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
+import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -19,6 +21,10 @@ public final class PinYinUtil {
      * 汉语拼音format
      */
     private static final HanyuPinyinOutputFormat PINYIN_OUTPUT_FORMAT = new HanyuPinyinOutputFormat();
+    private static final String[] EMPTY_ARRAY = {};
+    private static final Range<Character> DI_RANGE = Range.closed('0', '9');
+    private static final Range<Character> LCH_RANGE = Range.closed('a', 'z');
+    private static final Range<Character> UCH_RANGE = Range.closed('A', 'Z');
 
     static {
         PINYIN_OUTPUT_FORMAT.setCaseType(HanyuPinyinCaseType.LOWERCASE);
@@ -44,12 +50,12 @@ public final class PinYinUtil {
         for (char cc : chineseCharacter.toCharArray()) {
             // 无法识别的汉字跳过
             String[] res = getPinYinStringArray(cc);
-            boolean flag = (res != null) && isChineseCharacter(StringUtils.EMPTY + cc);
+            boolean flag = (res != null) && isChineseCharacter(cc);
             if (flag) {
                 sb.append(res[0]);
                 continue;
             }
-            if (isCharacterOrDigits(StringUtils.EMPTY + cc)) {
+            if (isCharacterOrDigits(cc)) {
                 sb.append(cc);
             }
         }
@@ -70,32 +76,18 @@ public final class PinYinUtil {
         for (char cc : chineseCharacter.toCharArray()) {
             // 无法识别的汉字跳过
             String[] res = getPinYinStringArray(cc);
-            boolean flag = (res != null) && isChineseCharacter(StringUtils.EMPTY + cc);
+            boolean flag = (res != null) && isChineseCharacter(cc);
             if (flag) {
                 sb.append(res[0].charAt(0));
                 continue;
             }
-            if (isCharacterOrDigits(StringUtils.EMPTY + cc)) {
+            if (isCharacterOrDigits(cc)) {
                 sb.append(cc);
             }
         }
         return sb.toString();
     }
 
-    /**
-     * 将字符串转移为ASCII码
-     *
-     * @param cnStr
-     * @return
-     */
-    public static String getCnASCII(String cnStr) {
-        byte[] bGBK = cnStr.getBytes();
-        StringBuilder strBuf = new StringBuilder(bGBK.length);
-        for (int i = 0; i < bGBK.length; i++) {
-            strBuf.append(String.format("%02x", bGBK[i]));
-        }
-        return strBuf.toString();
-    }
 
     /**
      * 将汉字转换为拼音
@@ -104,26 +96,34 @@ public final class PinYinUtil {
      * @return
      */
     private static String[] getPinYinStringArray(char cc) {
-        return PinyinHelper.toHanyuPinyinStringArray(cc);
+        try {
+            return PinyinHelper.toHanyuPinyinStringArray(cc, PINYIN_OUTPUT_FORMAT);
+        } catch (BadHanyuPinyinOutputFormatCombination badHanyuPinyinOutputFormatCombination) {
+            return EMPTY_ARRAY;
+        }
     }
 
     /**
      * 是否为汉字
      *
-     * @param input
+     * @param cc
      * @return
      */
-    private static boolean isChineseCharacter(CharSequence input) {
-        return RegexEnum.CHINESE_CHARACTER_PATTERN.getPattern().matcher(input).matches();
+    private static boolean isChineseCharacter(char cc) {
+        return Character.UnicodeScript.of(cc) == Character.UnicodeScript.HAN;
     }
 
     /**
      * 是否为字母或数字
      *
-     * @param input
+     * @param cc
      * @return
      */
-    private static boolean isCharacterOrDigits(CharSequence input) {
-        return RegexEnum.CHARACTER_DIGITS_PATTERN.getPattern().matcher(input).matches();
+    private static boolean isCharacterOrDigits(char cc) {
+        return DI_RANGE.contains(cc) || LCH_RANGE.contains(cc) || UCH_RANGE.contains(cc);
+    }
+
+    public static void main(String[] args) {
+        
     }
 }

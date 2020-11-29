@@ -1,4 +1,4 @@
-package com.zad.jdk8.util;
+package base;
 
 import com.google.common.base.Strings;
 import org.apache.commons.lang3.ArrayUtils;
@@ -13,7 +13,7 @@ import org.apache.commons.lang3.StringUtils;
 public final class StringUtil {
 
     private StringUtil() {
-        throw new AssertionError("Util禁止反射实例化");
+        throw new UnsupportedOperationException("Util禁止反射实例化");
     }
 
     public static boolean isBlank(final CharSequence cs) {

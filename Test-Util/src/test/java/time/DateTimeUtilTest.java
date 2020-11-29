@@ -1,16 +1,15 @@
-package com.zad.jdk8.util;
+package time;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.time.DateUtils;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.math.BigDecimal;
 import java.text.ParseException;
 import java.time.LocalDate;
-import java.util.*;
+import java.util.Date;
+import java.util.Objects;
+import java.util.PriorityQueue;
+import java.util.Scanner;
 
 @Slf4j
 public class DateTimeUtilTest {
@@ -53,7 +52,7 @@ public class DateTimeUtilTest {
         Scanner s1 = new Scanner(System.in);
         while (s1.hasNext()) {
             String s = s1.next();
-            if (StringUtils.equals(s, "stop")) {
+            if (Objects.equals(s,"stop")) {
                 break;
             }
             System.err.println(s);
@@ -81,17 +80,6 @@ public class DateTimeUtilTest {
 
     @Test
     void t4() throws ParseException {
-        Date d1 = DateUtils.parseDate("1990-02-07 12:00:00","yyyy-MM-dd HH:mm:ss");
-        Date d2 = DateUtils.parseDate("1990-02-07 12:00:00","yyyy-MM-dd HH:mm:ss");
-        Assertions.assertEquals(d1,d2);
-        BigDecimal b1 = null;
-        BigDecimal b2 = new BigDecimal(1);
 
-        System.out.println(Objects.compare(b1, b2, new Comparator<BigDecimal>() {
-            @Override
-            public int compare(BigDecimal o1, BigDecimal o2) {
-                return 0;
-            }
-        }));
     }
 }

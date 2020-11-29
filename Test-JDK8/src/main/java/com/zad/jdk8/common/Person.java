@@ -1,5 +1,4 @@
 package com.zad.jdk8.common;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -21,6 +21,7 @@
         <module>Test-Log</module>
         <module>Test-Log/slf4j-simple</module>
         <module>Test-Log/logback</module>
+        <module>Test-Util</module>
     </modules>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

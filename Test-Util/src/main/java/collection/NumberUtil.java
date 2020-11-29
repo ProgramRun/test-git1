@@ -1,4 +1,4 @@
-package com.zad.jdk8.util;
+package collection;
 
 import com.google.common.base.Function;
 import org.apache.commons.lang3.ArrayUtils;

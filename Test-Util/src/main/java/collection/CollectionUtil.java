@@ -1,8 +1,8 @@
-package com.zad.jdk8.util;
+package collection;
 
 
+import base.StringUtil;
 import com.google.common.collect.Lists;
-import lombok.var;
 
 import java.util.*;
 import java.util.function.Function;
@@ -62,8 +62,7 @@ public final class CollectionUtil {
 
 
     public static void main(String[] args) {
-        var l = List.of(":", "1", "", "a");
-        System.out.println(removeBlankString(l));
+
     }
 
     public static <T> Collection<T> filter(Collection<T> input, Predicate<T> predicate) {
