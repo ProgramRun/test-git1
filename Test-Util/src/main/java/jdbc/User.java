@@ -1,8 +1,11 @@
 package jdbc;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import javax.annotation.Nonnull;
 
 /**
  * @Author waiter
@@ -11,8 +14,10 @@ import lombok.NoArgsConstructor;
  * @Description
  */
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Nonnull
 public class User {
 
     Integer id;
