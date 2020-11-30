@@ -64,7 +64,7 @@ public final class StringUtil {
 
 
     public static boolean isAllEmpty(final CharSequence... css) {
-        return StringUtils.isAnyEmpty(css);
+        return StringUtils.isAllEmpty(css);
     }
 
     /**
@@ -105,13 +105,6 @@ public final class StringUtil {
         return containsUnicodeScript(cs, Character.UnicodeScript.HAN);
     }
 
-    public static boolean isJapanese(final CharSequence cs) {
-        return isAllUnicodeScript(cs, Character.UnicodeScript.HAN);
-    }
-
-    public static boolean containsJapanese(final CharSequence cs) {
-        return containsUnicodeScript(cs, Character.UnicodeScript.JAVANESE);
-    }
 
     private static boolean isAllUnicodeScript(final CharSequence cs, Character.UnicodeScript unicodeScript) {
         if (isBlank(cs)) {

@@ -11,8 +11,8 @@ import lombok.Getter;
 @Getter
 public class DBConfig {
     static String driverName = "com.mysql.cj.jdbc.Driver";
-    static String url = "jdbc:mysql://192.168.92.128/soul";
-    static String username = "oie";
-    static String password = "12345678";
+    static String url = "jdbc:mysql://localhost/uc_db?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+    static String username = "root";
+    static String password = "111111";
 
 }
